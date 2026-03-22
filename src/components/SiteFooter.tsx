@@ -1,83 +1,65 @@
 import { Link } from "react-router-dom";
-import { Phone, Mail, MapPin } from "lucide-react";
 import briqLogo from "@/assets/briq-logo.jpeg";
 
-const PHONE = "+1 (555) 123-4567";
-
 const SiteFooter = () => (
-  <footer className="bg-secondary text-secondary-foreground">
-    <div className="container-wide mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-        <div>
-          <div className="flex items-center gap-2 mb-4">
-            <img src={briqLogo} alt="BriQ" className="h-10 w-10 rounded-sm object-contain" />
-            <div>
-              <span className="font-display font-bold text-lg">BriQ</span>
-              <span className="block text-[10px] tracking-widest uppercase opacity-60">Engineering & Consulting</span>
-            </div>
+  <footer className="border-t border-border">
+    <div className="container-site px-5 sm:px-8 lg:px-16 py-16 sm:py-20">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
+        <div className="lg:col-span-1">
+          <div className="flex items-center gap-2.5 mb-5">
+            <img src={briqLogo} alt="BriQ" className="h-8 w-8 rounded object-contain" />
+            <span className="font-display font-bold text-[15px] tracking-tight">BriQ</span>
           </div>
-          <p className="text-sm opacity-70 leading-relaxed max-w-xs">
-            Delivering excellence in electrical engineering and construction consulting since 2008.
+          <p className="body-sm max-w-[260px]">
+            Electrical engineering and construction consulting excellence since 2008.
           </p>
-          <div className="flex gap-3 mt-6">
-            {["linkedin", "twitter", "facebook", "instagram"].map((social) => (
-              <a
-                key={social}
-                href="#"
-                className="w-9 h-9 rounded-full bg-secondary-foreground/10 hover:bg-primary hover:text-primary-foreground flex items-center justify-center transition-all duration-200 text-xs font-bold uppercase"
-                aria-label={social}
-              >
-                {social[0].toUpperCase()}
-              </a>
+        </div>
+
+        <div>
+          <h4 className="label-sm mb-5">Services</h4>
+          <ul className="space-y-3">
+            {["Electrical Engineering", "Construction Consulting", "Project Management", "Installation & Execution"].map((s) => (
+              <li key={s}><Link to="/services" className="text-sm text-muted-foreground hover:text-foreground transition-colors">{s}</Link></li>
+            ))}
+          </ul>
+        </div>
+
+        <div>
+          <h4 className="label-sm mb-5">Company</h4>
+          <ul className="space-y-3">
+            {[
+              { label: "About", path: "/about" },
+              { label: "Work", path: "/projects" },
+              { label: "Team", path: "/team" },
+              { label: "Sustainability", path: "/sustainability" },
+              { label: "Contact", path: "/contact" },
+            ].map((l) => (
+              <li key={l.path}><Link to={l.path} className="text-sm text-muted-foreground hover:text-foreground transition-colors">{l.label}</Link></li>
+            ))}
+          </ul>
+        </div>
+
+        <div>
+          <h4 className="label-sm mb-5">Get in touch</h4>
+          <ul className="space-y-3 text-sm text-muted-foreground">
+            <li><a href="tel:+15551234567" className="hover:text-foreground transition-colors">+1 (555) 123-4567</a></li>
+            <li><a href="mailto:info@briqengineering.com" className="hover:text-foreground transition-colors">info@briqengineering.com</a></li>
+            <li>New York, NY</li>
+          </ul>
+          <div className="flex gap-4 mt-6">
+            {["LinkedIn", "X", "Instagram"].map((s) => (
+              <a key={s} href="#" className="text-xs text-muted-foreground hover:text-foreground transition-colors">{s}</a>
             ))}
           </div>
         </div>
-
-        <div>
-          <h4 className="font-display font-semibold text-sm uppercase tracking-wider mb-4">Services</h4>
-          <ul className="space-y-2 text-sm opacity-70">
-            <li><Link to="/services" className="hover:text-primary transition-colors">Electrical Engineering</Link></li>
-            <li><Link to="/services" className="hover:text-primary transition-colors">Construction Consulting</Link></li>
-            <li><Link to="/services" className="hover:text-primary transition-colors">Project Management</Link></li>
-            <li><Link to="/services" className="hover:text-primary transition-colors">Installation & Execution</Link></li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 className="font-display font-semibold text-sm uppercase tracking-wider mb-4">Company</h4>
-          <ul className="space-y-2 text-sm opacity-70">
-            <li><Link to="/about" className="hover:text-primary transition-colors">About Us</Link></li>
-            <li><Link to="/projects" className="hover:text-primary transition-colors">Projects</Link></li>
-            <li><Link to="/team" className="hover:text-primary transition-colors">Our Team</Link></li>
-            <li><Link to="/sustainability" className="hover:text-primary transition-colors">Sustainability</Link></li>
-            <li><Link to="/contact" className="hover:text-primary transition-colors">Contact</Link></li>
-          </ul>
-        </div>
-
-        <div>
-          <h4 className="font-display font-semibold text-sm uppercase tracking-wider mb-4">Contact</h4>
-          <ul className="space-y-3 text-sm opacity-70">
-            <li className="flex items-start gap-2">
-              <Phone className="w-4 h-4 mt-0.5 text-primary" />
-              <a href={`tel:${PHONE.replace(/\s/g, "")}`} className="hover:text-primary transition-colors">{PHONE}</a>
-            </li>
-            <li className="flex items-start gap-2">
-              <Mail className="w-4 h-4 mt-0.5 text-primary" />
-              <a href="mailto:info@briqengineering.com" className="hover:text-primary transition-colors">info@briqengineering.com</a>
-            </li>
-            <li className="flex items-start gap-2">
-              <MapPin className="w-4 h-4 mt-0.5 text-primary" />
-              <span>123 Engineering Blvd, Suite 400<br />New York, NY 10001</span>
-            </li>
-          </ul>
-        </div>
       </div>
 
-      <div className="border-t border-secondary-foreground/10 mt-12 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs opacity-50">
-        <p>© {new Date().getFullYear()} BriQ Engineering & Consulting. All rights reserved.</p>
-        <div className="flex gap-4">
-          <a href="#" className="hover:text-primary transition-colors">Privacy Policy</a>
-          <a href="#" className="hover:text-primary transition-colors">Terms of Service</a>
+      <div className="divider mt-14 mb-8" />
+      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 text-xs text-muted-foreground">
+        <p>© {new Date().getFullYear()} BriQ Engineering & Consulting</p>
+        <div className="flex gap-6">
+          <a href="#" className="hover:text-foreground transition-colors">Privacy</a>
+          <a href="#" className="hover:text-foreground transition-colors">Terms</a>
         </div>
       </div>
     </div>
