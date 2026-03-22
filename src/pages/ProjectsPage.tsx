@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import ScrollReveal from "@/components/ScrollReveal";
 import project1 from "@/assets/project-1.jpg";
 import project2 from "@/assets/project-2.jpg";
@@ -10,13 +12,13 @@ const categories = ["All", "Commercial", "Industrial", "Renewable Energy", "Infr
 
 const projects = [
   { img: project1, title: "Metropolitan Office Complex", category: "Commercial", desc: "Full electrical design and installation for a 42-story mixed-use development.", outcome: "Completed 3 weeks ahead of schedule" },
-  { img: project2, title: "Industrial Power Distribution", category: "Industrial", desc: "High-voltage switchgear and distribution network for a 200,000 sq ft manufacturing facility.", outcome: "Zero safety incidents during installation" },
+  { img: project2, title: "Industrial Power Distribution", category: "Industrial", desc: "High-voltage switchgear and distribution network for a 200,000 sq ft manufacturing facility.", outcome: "Zero safety incidents" },
   { img: project3, title: "Corporate Solar Integration", category: "Renewable Energy", desc: "1.2MW rooftop solar system with smart grid integration for a tech campus.", outcome: "34% reduction in energy costs" },
-  { img: project4, title: "Highway Interchange Lighting", category: "Infrastructure", desc: "Complete LED lighting system design and installation for a major highway interchange.", outcome: "42% energy savings vs. original design" },
+  { img: project4, title: "Highway Interchange Lighting", category: "Infrastructure", desc: "Complete LED lighting system design and installation for a major highway interchange.", outcome: "42% energy savings" },
   { img: project1, title: "Medical Center Expansion", category: "Commercial", desc: "Critical power systems design for a 120-bed hospital expansion with full redundancy.", outcome: "100% uptime since commissioning" },
-  { img: project2, title: "Data Center Power Systems", category: "Industrial", desc: "Tier III data center electrical infrastructure with dual UPS and generator backup.", outcome: "99.999% power availability achieved" },
-  { img: project3, title: "Municipal Solar Farm", category: "Renewable Energy", desc: "5MW ground-mounted solar installation with battery storage for municipal grid support.", outcome: "Powers 1,200+ homes annually" },
-  { img: project4, title: "Transit Station Upgrade", category: "Infrastructure", desc: "Electrical modernization of 12 transit stations including signaling and emergency systems.", outcome: "Delivered on budget, 4 months ahead" },
+  { img: project2, title: "Data Center Power Systems", category: "Industrial", desc: "Tier III data center electrical infrastructure with dual UPS and generator backup.", outcome: "99.999% power availability" },
+  { img: project3, title: "Municipal Solar Farm", category: "Renewable Energy", desc: "5MW ground-mounted solar installation with battery storage.", outcome: "Powers 1,200+ homes annually" },
+  { img: project4, title: "Transit Station Upgrade", category: "Infrastructure", desc: "Electrical modernization of 12 transit stations including signaling.", outcome: "Delivered 4 months early" },
 ];
 
 const ProjectsPage = () => {
@@ -24,52 +26,63 @@ const ProjectsPage = () => {
   const filtered = active === "All" ? projects : projects.filter((p) => p.category === active);
 
   return (
-    <main className="pt-16">
-      <section className="section-padding bg-secondary text-secondary-foreground">
-        <div className="container-wide mx-auto text-center">
+    <main className="pt-20">
+      <section className="section-spacing">
+        <div className="container-site px-5 sm:px-8 lg:px-16">
           <ScrollReveal>
-            <p className="text-primary font-semibold text-sm uppercase tracking-wider mb-2">Portfolio</p>
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">Our Project Portfolio</h1>
-            <p className="text-lg opacity-70 max-w-2xl mx-auto">Explore our track record of delivering complex engineering projects across multiple sectors.</p>
+            <div className="max-w-3xl mx-auto text-center mb-14">
+              <p className="label-sm mb-3">Portfolio</p>
+              <h1 className="heading-xl mb-5">Our work</h1>
+              <p className="body-lg max-w-xl mx-auto">Explore our track record of delivering complex engineering projects across multiple sectors.</p>
+            </div>
           </ScrollReveal>
-        </div>
-      </section>
 
-      <section className="section-padding bg-background">
-        <div className="container-wide mx-auto">
-          <ScrollReveal>
-            <div className="flex flex-wrap gap-2 justify-center mb-12">
+          <ScrollReveal delay={80}>
+            <div className="flex flex-wrap gap-2 justify-center mb-14">
               {categories.map((c) => (
-                <Button
+                <button
                   key={c}
-                  variant={active === c ? "default" : "outline"}
-                  size="sm"
                   onClick={() => setActive(c)}
+                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-200 ${
+                    active === c
+                      ? "bg-foreground text-background"
+                      : "bg-secondary text-muted-foreground hover:text-foreground"
+                  }`}
                 >
                   {c}
-                </Button>
+                </button>
               ))}
             </div>
           </ScrollReveal>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-5 gap-y-12">
             {filtered.map((p, i) => (
               <ScrollReveal key={p.title + i} delay={i * 60}>
-                <div className="group bg-card rounded-xl overflow-hidden border border-border card-hover h-full flex flex-col">
-                  <div className="overflow-hidden aspect-[4/3]">
-                    <img src={p.img} alt={p.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+                <div className="group">
+                  <div className="rounded-2xl overflow-hidden aspect-[4/3] bg-secondary mb-4">
+                    <img src={p.img} alt={p.title} className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-700 ease-out" loading="lazy" />
                   </div>
-                  <div className="p-5 flex flex-col flex-1">
-                    <span className="text-xs font-semibold text-primary uppercase tracking-wider">{p.category}</span>
-                    <h3 className="font-display font-bold text-lg mt-1 mb-2">{p.title}</h3>
-                    <p className="text-muted-foreground text-sm flex-1">{p.desc}</p>
-                    <div className="mt-3 pt-3 border-t border-border text-xs font-medium text-primary">
-                      ✓ {p.outcome}
+                  <div className="flex items-start justify-between gap-4">
+                    <div>
+                      <p className="label-sm text-accent mb-1">{p.category}</p>
+                      <h3 className="font-display font-semibold text-base tracking-tight mb-1">{p.title}</h3>
+                      <p className="text-sm text-muted-foreground">{p.desc}</p>
+                      <p className="text-xs font-medium text-accent mt-2">✓ {p.outcome}</p>
                     </div>
                   </div>
                 </div>
               </ScrollReveal>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="section-spacing-sm bg-secondary text-center">
+        <div className="container-site px-5 sm:px-8 lg:px-16">
+          <ScrollReveal>
+            <h2 className="heading-lg mb-6">Have a project in mind?</h2>
+            <Link to="/contact"><Button size="lg">Let's talk <ArrowRight className="w-4 h-4" /></Button></Link>
+          </ScrollReveal>
         </div>
       </section>
     </main>
