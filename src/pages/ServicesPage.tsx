@@ -1,92 +1,80 @@
 import { Button } from "@/components/ui/button";
-import { Phone, ArrowRight, Zap, Building2, Shield, Award, Wrench, Lightbulb } from "lucide-react";
+import { ArrowRight, Phone } from "lucide-react";
 import { Link } from "react-router-dom";
 import ScrollReveal from "@/components/ScrollReveal";
 import LeadForm from "@/components/LeadForm";
 
-const PHONE = "+1 (555) 123-4567";
-
 const services = [
   {
-    icon: Zap,
     title: "Electrical Engineering",
     desc: "Comprehensive electrical system design, power distribution analysis, load calculations, and optimization for commercial, industrial, and infrastructure projects.",
-    benefits: ["Power system design & analysis", "Load flow & short circuit studies", "Electrical system audits", "Code compliance review"],
+    items: ["Power system design & analysis", "Load flow & short circuit studies", "Electrical system audits", "Code compliance review"],
   },
   {
-    icon: Building2,
     title: "Construction Consulting",
     desc: "Expert advisory services for construction projects including feasibility studies, cost estimation, risk assessment, and regulatory compliance guidance.",
-    benefits: ["Feasibility & viability studies", "Cost estimation & value engineering", "Regulatory compliance", "Risk assessment & mitigation"],
+    items: ["Feasibility & viability studies", "Cost estimation & value engineering", "Regulatory compliance", "Risk assessment & mitigation"],
   },
   {
-    icon: Shield,
     title: "Project Management",
-    desc: "End-to-end project execution with rigorous scheduling, quality control, budget management, and stakeholder coordination to deliver results on time.",
-    benefits: ["Schedule & budget management", "Quality assurance & control", "Stakeholder coordination", "Progress reporting & analytics"],
+    desc: "End-to-end project execution with rigorous scheduling, quality control, budget management, and stakeholder coordination.",
+    items: ["Schedule & budget management", "Quality assurance & control", "Stakeholder coordination", "Progress reporting & analytics"],
   },
   {
-    icon: Wrench,
     title: "Installation & Execution",
-    desc: "Professional installation of electrical systems, switchgear, transformers, and distribution networks with full safety compliance and testing.",
-    benefits: ["Switchgear & panel installation", "Transformer commissioning", "Cable management systems", "Testing & commissioning"],
+    desc: "Professional installation of electrical systems, switchgear, transformers, and distribution networks with full safety compliance.",
+    items: ["Switchgear & panel installation", "Transformer commissioning", "Cable management systems", "Testing & commissioning"],
   },
   {
-    icon: Lightbulb,
     title: "Energy Solutions",
-    desc: "Sustainable energy design including solar integration, energy management systems, LED retrofits, and energy auditing for reduced operational costs.",
-    benefits: ["Solar PV system design", "Energy management systems", "LED lighting retrofits", "Energy audits & optimization"],
+    desc: "Sustainable energy design including solar integration, energy management systems, LED retrofits, and energy auditing.",
+    items: ["Solar PV system design", "Energy management systems", "LED lighting retrofits", "Energy audits & optimization"],
   },
   {
-    icon: Award,
     title: "Technical Advisory",
     desc: "Specialized consulting for complex electrical challenges, expert witness services, technical due diligence, and independent design reviews.",
-    benefits: ["Independent design review", "Technical due diligence", "Expert witness services", "Specification development"],
+    items: ["Independent design review", "Technical due diligence", "Expert witness services", "Specification development"],
   },
 ];
 
 const ServicesPage = () => (
-  <main className="pt-16">
-    <section className="section-padding bg-secondary text-secondary-foreground">
-      <div className="container-wide mx-auto text-center">
+  <main className="pt-20">
+    <section className="section-spacing">
+      <div className="container-site px-5 sm:px-8 lg:px-16">
         <ScrollReveal>
-          <p className="text-primary font-semibold text-sm uppercase tracking-wider mb-2">Our Services</p>
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">Engineering Solutions That Deliver</h1>
-          <p className="text-lg opacity-70 max-w-2xl mx-auto">From concept to commissioning, BriQ provides the full spectrum of electrical engineering and construction consulting services.</p>
+          <div className="max-w-3xl mx-auto text-center">
+            <p className="label-sm mb-3">Services</p>
+            <h1 className="heading-xl mb-5">Engineering solutions that deliver</h1>
+            <p className="body-lg max-w-xl mx-auto">From concept to commissioning, BriQ provides the full spectrum of electrical engineering and construction consulting services.</p>
+          </div>
         </ScrollReveal>
       </div>
     </section>
 
-    <section className="section-padding bg-background">
-      <div className="container-wide mx-auto space-y-8">
+    <section className="px-5 sm:px-8 lg:px-16 pb-20 sm:pb-28">
+      <div className="container-site">
         {services.map((s, i) => (
-          <ScrollReveal key={s.title} delay={i * 60}>
-            <div className="bg-card rounded-xl border border-border p-6 sm:p-8 lg:p-10 card-hover">
-              <div className="grid grid-cols-1 lg:grid-cols-[1fr,auto] gap-6 items-start">
+          <ScrollReveal key={s.title} delay={i * 40}>
+            <div className="py-10 sm:py-14 border-t border-border last:border-b">
+              <div className="grid grid-cols-1 lg:grid-cols-[1fr,1fr] gap-8 lg:gap-16">
                 <div>
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-12 h-12 rounded-lg bg-accent flex items-center justify-center">
-                      <s.icon className="w-6 h-6 text-accent-foreground" />
-                    </div>
-                    <h2 className="font-display text-xl sm:text-2xl font-bold">{s.title}</h2>
-                  </div>
-                  <p className="text-muted-foreground leading-relaxed mb-4 max-w-2xl">{s.desc}</p>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                    {s.benefits.map((b) => (
-                      <div key={b} className="flex items-center gap-2 text-sm">
-                        <div className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />
-                        {b}
-                      </div>
-                    ))}
-                  </div>
+                  <span className="label-sm text-accent mb-2 block">0{i + 1}</span>
+                  <h2 className="heading-md mb-3">{s.title}</h2>
+                  <p className="body-sm max-w-md">{s.desc}</p>
                 </div>
-                <div className="flex flex-col gap-2 sm:flex-row lg:flex-col">
-                  <Link to="/contact">
-                    <Button variant="hero" size="lg" className="w-full">Get a Quote</Button>
-                  </Link>
-                  <a href={`tel:${PHONE.replace(/\s/g, "")}`}>
-                    <Button variant="outline" size="lg" className="w-full"><Phone className="w-4 h-4" /> Call Now</Button>
-                  </a>
+                <div className="flex flex-col justify-between">
+                  <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-6">
+                    {s.items.map((item) => (
+                      <li key={item} className="text-sm flex items-center gap-2">
+                        <span className="w-1 h-1 rounded-full bg-accent flex-shrink-0" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="flex gap-2">
+                    <Link to="/contact"><Button size="sm">Get a quote <ArrowRight className="w-3.5 h-3.5" /></Button></Link>
+                    <a href="tel:+15551234567"><Button variant="outline" size="sm"><Phone className="w-3.5 h-3.5" /> Call</Button></a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -95,19 +83,13 @@ const ServicesPage = () => (
       </div>
     </section>
 
-    <section className="section-padding bg-section-warm">
-      <div className="container-narrow mx-auto">
-        <ScrollReveal>
-          <div className="text-center mb-10">
-            <h2 className="text-3xl sm:text-4xl font-bold">Request a Service Quote</h2>
-            <p className="text-muted-foreground mt-3">Tell us about your project and we'll provide a detailed proposal.</p>
-          </div>
-        </ScrollReveal>
-        <ScrollReveal delay={100}>
-          <div className="max-w-2xl mx-auto">
-            <LeadForm title="Request a Service Quote" />
-          </div>
-        </ScrollReveal>
+    <section className="section-spacing bg-secondary">
+      <div className="container-site px-5 sm:px-8 lg:px-16">
+        <div className="max-w-xl mx-auto">
+          <ScrollReveal>
+            <LeadForm title="Request a service quote" />
+          </ScrollReveal>
+        </div>
       </div>
     </section>
   </main>
