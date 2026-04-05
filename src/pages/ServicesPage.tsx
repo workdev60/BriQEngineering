@@ -44,8 +44,8 @@ const ServicesPage = () => (
         <ScrollReveal>
           <div className="max-w-3xl mx-auto text-center">
             <p className="label-sm mb-3">Services</p>
-            <h1 className="heading-xl mb-5">Engineering solutions that deliver</h1>
-            <p className="body-lg max-w-xl mx-auto">From concept to commissioning, BriQ provides the full spectrum of electrical engineering and construction consulting services.</p>
+            <h1 className="heading-xl mb-5">Our engineering services</h1>
+            <p className="body-lg max-w-xl mx-auto">From concept to commissioning, we provide a full spectrum of electrical engineering and construction consulting services.</p>
           </div>
         </ScrollReveal>
       </div>

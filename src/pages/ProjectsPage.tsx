@@ -33,7 +33,7 @@ const ProjectsPage = () => {
             <div className="max-w-3xl mx-auto text-center mb-14">
               <p className="label-sm mb-3">Portfolio</p>
               <h1 className="heading-xl mb-5">Our work</h1>
-              <p className="body-lg max-w-xl mx-auto">Explore our track record of delivering complex engineering projects across multiple sectors.</p>
+              <p className="body-lg max-w-xl mx-auto">View our past engineering projects across various sectors.</p>
             </div>
           </ScrollReveal>
 

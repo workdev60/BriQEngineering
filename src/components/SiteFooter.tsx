@@ -8,7 +8,7 @@ const SiteFooter = () => (
         <div className="lg:col-span-1">
           <div className="flex items-center gap-2.5 mb-5">
             <img src={briqLogo} alt="BriQ" className="h-8 w-8 rounded object-contain" />
-            <span className="font-display font-bold text-[15px] tracking-tight">BriQ</span>
+            <span className="font-display font-bold text-[15px] tracking-tight">BriQ Engineering</span>
           </div>
           <p className="body-sm max-w-[260px]">
             Electrical engineering and construction consulting excellence since 2008.

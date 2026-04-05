@@ -32,7 +32,7 @@ const AboutPage = () => (
           </ScrollReveal>
           <ScrollReveal delay={100}>
             <p className="label-sm mb-3">Our story</p>
-            <h2 className="heading-lg mb-6">Building the future since 2008</h2>
+            <h2 className="heading-lg mb-6">Engineering excellence since 2008</h2>
             <p className="body-sm mb-4">
               Founded by Khalid Al-Mansour with a clear mission: deliver engineering excellence clients can trust. Starting with a team of three engineers, we've grown to a multidisciplinary firm of 50+ professionals.
             </p>

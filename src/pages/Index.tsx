@@ -18,9 +18,9 @@ const services = [
 ];
 
 const testimonials = [
-  { name: "Marcus Chen", role: "VP Operations, Meridian Group", text: "BriQ delivered our $4.2M electrical overhaul three weeks ahead of schedule. Their technical expertise and project management are world-class." },
-  { name: "Sarah Al-Rashid", role: "Director, Oasis Developments", text: "We've partnered with BriQ on seven projects. Their consistency, professionalism, and attention to detail set them apart from every other firm." },
-  { name: "David Okafor", role: "CEO, Atlas Construction", text: "The sustainability-focused electrical design BriQ created for our headquarters reduced energy costs by 34%. Outstanding engineering." },
+  { name: "Marcus Chen", role: "VP Operations, Meridian Group", text: "BriQ Engineering delivered our $4.2M electrical overhaul three weeks ahead of schedule. Their technical expertise and project management are world-class." },
+  { name: "Sarah Al-Rashid", role: "Director, Oasis Developments", text: "We've partnered with BriQ Engineering on seven projects. Their consistency, professionalism, and attention to detail set them apart from every other firm." },
+  { name: "David Okafor", role: "CEO, Atlas Construction", text: "The sustainability-focused electrical design BriQ Engineering created for our headquarters reduced energy costs by 34%. Outstanding engineering." },
 ];
 
 const featuredProjects = [
@@ -47,7 +47,7 @@ const Index = () => (
           </ScrollReveal>
           <ScrollReveal delay={100}>
             <p className="body-lg max-w-xl mx-auto mb-10">
-              We deliver world-class engineering solutions for commercial, industrial, and infrastructure projects — on time, on budget, every time.
+              We deliver specialized engineering solutions for commercial, industrial, and infrastructure projects.
             </p>
           </ScrollReveal>
           <ScrollReveal delay={200}>
@@ -189,9 +189,9 @@ const Index = () => (
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           <ScrollReveal>
             <p className="label-sm mb-3">Start a project</p>
-            <h2 className="heading-lg mb-4">Let's build something exceptional</h2>
+            <h2 className="heading-lg mb-4">Start your project</h2>
             <p className="body-lg mb-8 max-w-md">
-              Tell us about your project and get a detailed proposal from our engineering team within 24 hours.
+              Contact our engineering team to discuss your project requirements.
             </p>
             <div className="flex items-center gap-4">
               <a href="tel:+15551234567" className="flex items-center gap-2 text-sm font-medium hover:text-accent transition-colors">

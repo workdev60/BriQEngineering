@@ -4,12 +4,8 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
 const team = [
-  { name: "Khalid Al-Mansour", role: "Founder & CEO", expertise: "30+ years in electrical engineering and construction management. Licensed PE with expertise in high-voltage systems.", initials: "KA" },
-  { name: "Dr. Elena Vasquez", role: "Chief Engineer", expertise: "PhD in Power Systems Engineering. Specializes in sustainable energy design and smart grid integration.", initials: "EV" },
-  { name: "James Mwangi", role: "Director of Operations", expertise: "20 years managing large-scale construction projects across commercial and industrial sectors.", initials: "JM" },
-  { name: "Priya Sharma", role: "Senior Electrical Engineer", expertise: "Expert in building electrical systems, fire alarm design, and code compliance. LEED AP certified.", initials: "PS" },
-  { name: "Robert Tanaka", role: "Project Manager", expertise: "PMP certified with 15 years delivering complex engineering projects on time and within budget.", initials: "RT" },
-  { name: "Fatima Al-Zahrani", role: "Sustainability Lead", expertise: "Specialist in green building certifications, energy auditing, and renewable energy integration.", initials: "FA" },
+  { name: "Bright Quansah", role: "Founder", expertise: "Electrical engineering and construction management.", initials: "BQ" },
+  { name: "David Numo", role: "Founder", expertise: "Engineering and operations management.", initials: "DN" },
 ];
 
 const TeamPage = () => (
@@ -19,7 +15,7 @@ const TeamPage = () => (
         <ScrollReveal>
           <div className="max-w-3xl mx-auto text-center mb-16">
             <p className="label-sm mb-3">Our team</p>
-            <h1 className="heading-xl mb-5">The experts behind BriQ</h1>
+            <h1 className="heading-xl mb-5">The experts behind BriQ Engineering</h1>
             <p className="body-lg max-w-xl mx-auto">A multidisciplinary team of licensed engineers, project managers, and consultants with decades of combined experience.</p>
           </div>
         </ScrollReveal>

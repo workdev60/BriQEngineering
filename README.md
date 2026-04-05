@@ -1,3 +1,3 @@
-# Welcome to your Lovable project
+# BriQ Engineering
 
-TODO: Document your project here
+BriQ Engineering & Consulting Website codebase.

@@ -10,7 +10,7 @@ const VideoPage = () => (
       <div className="container-site px-5 sm:px-8 lg:px-16">
         <ScrollReveal>
           <div className="text-center max-w-3xl mx-auto mb-14">
-            <p className="label-sm mb-3">Discover BriQ</p>
+            <p className="label-sm mb-3">Discover BriQ Engineering</p>
             <h1 className="heading-xl mb-5">See what sets us apart</h1>
             <p className="body-lg">Watch our story and understand why leading organizations choose BriQ Engineering.</p>
           </div>

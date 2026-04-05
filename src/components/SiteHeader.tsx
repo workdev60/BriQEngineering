@@ -21,7 +21,7 @@ const SiteHeader = () => {
       <div className="container-site flex items-center justify-between h-16 sm:h-20 px-5 sm:px-8 lg:px-16">
         <Link to="/" className="flex items-center gap-2.5">
           <img src={briqLogo} alt="BriQ" className="h-8 w-8 rounded object-contain" />
-          <span className="font-display font-bold text-foreground text-[15px] tracking-tight hidden sm:block">BriQ</span>
+          <span className="font-display font-bold text-foreground text-[15px] tracking-tight hidden sm:block">BriQ Engineering</span>
         </Link>
 
         <nav className="hidden lg:flex items-center gap-1">
