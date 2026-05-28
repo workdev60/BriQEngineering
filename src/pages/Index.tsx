@@ -1,62 +1,74 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Phone } from "lucide-react";
+import { ArrowRight, Phone, Shield, Clock, Award, Users } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 import StatsBar from "@/components/StatsBar";
-import LeadForm from "@/components/LeadForm";
-import heroBg from "@/assets/hero-bg.jpg";
-import project1 from "@/assets/project-1.jpg";
-import project2 from "@/assets/project-2.jpg";
-import project3 from "@/assets/project-3.jpg";
-import project4 from "@/assets/project-4.jpg";
+import BookingForm from "@/components/BookingForm";
+import heroBg from "@/assets/hero-bg-v2.png";
+import serviceBuilding from "@/assets/service-building.png";
+import servicePlumbing from "@/assets/service-plumbing.png";
+import serviceElectrical from "@/assets/service-electrical.png";
+import servicePower from "@/assets/service-power.png";
+import oldProject1 from "@/assets/project-1.jpg";
+import oldProject2 from "@/assets/project-2.jpg";
+import oldProject3 from "@/assets/project-3.jpg";
+import oldProject4 from "@/assets/project-4.jpg";
 
 const services = [
-  { title: "Electrical Engineering", desc: "Complete electrical system design, analysis, and optimization for commercial and industrial facilities." },
-  { title: "Construction Consulting", desc: "Expert guidance throughout every phase of your construction project, from planning to completion." },
-  { title: "Project Management", desc: "End-to-end project execution with rigorous quality control, budgeting, and timeline management." },
-  { title: "Installation & Execution", desc: "Professional installation of electrical systems with full compliance and safety standards." },
+  { title: "Building Construction", desc: "Residential and commercial structures, fully managed from foundation to roofing. We bring in vetted artisans, supervise quality, and deliver results." },
+  { title: "Plumbing Works", desc: "Full plumbing installation within buildings — interior and exterior finishing works, handled by our certified plumbing teams." },
+  { title: "Electrical & Lighting Systems", desc: "Internal building wiring, lighting installations, and electrical system design for homes and commercial facilities." },
+  { title: "Power Infrastructure", desc: "High tension lines, low voltage distribution, substation construction, and power network installations for large-scale projects." },
 ];
 
-const testimonials = [
-  { name: "Marcus Chen", role: "VP Operations, Meridian Group", text: "BriQ Engineering delivered our $4.2M electrical overhaul three weeks ahead of schedule. Their technical expertise and project management are world-class." },
-  { name: "Sarah Al-Rashid", role: "Director, Oasis Developments", text: "We've partnered with BriQ Engineering on seven projects. Their consistency, professionalism, and attention to detail set them apart from every other firm." },
-  { name: "David Okafor", role: "CEO, Atlas Construction", text: "The sustainability-focused electrical design BriQ Engineering created for our headquarters reduced energy costs by 34%. Outstanding engineering." },
+const whyUs = [
+  { icon: Shield, title: "We Own Your Project", desc: "BriQ is the main contractor — not a referral platform. When you give us a project, we take full responsibility from day one to handover." },
+  { icon: Users, title: "Vetted Artisan Teams", desc: "Our artisans work under BriQ, not independently. Every worker is vetted, trained, and supervised by our engineers on-site." },
+  { icon: Award, title: "Quality Supervision", desc: "Licensed engineers oversee every phase. We don't cut corners and we don't compromise on standards." },
+  { icon: Clock, title: "On-Time Delivery", desc: "We manage timelines rigorously so you don't have to. Projects are completed on schedule and handed over cleanly." },
 ];
 
 const featuredProjects = [
-  { img: project1, title: "Metropolitan Office Complex", category: "Commercial" },
-  { img: project2, title: "Industrial Power Systems", category: "Industrial" },
-  { img: project3, title: "Solar Integration Project", category: "Renewable Energy" },
-  { img: project4, title: "Highway Infrastructure", category: "Infrastructure" },
+  { img: serviceBuilding, title: "Residential Construction", category: "Building Construction" },
+  { img: servicePlumbing, title: "Commercial Facility", category: "Plumbing Works" },
+  { img: servicePower, title: "Power Infrastructure", category: "Power Infrastructure" },
+  { img: serviceElectrical, title: "Electrical Installation", category: "Electrical Works" },
 ];
 
-const clients = ["Meridian Group", "Oasis Developments", "Atlas Construction", "Nova Industries", "Pacific Holdings", "Vertex Engineering"];
+const fieldWork = [oldProject1, oldProject2, oldProject3, oldProject4];
+
+const clients = ["Individual Homeowners", "Real Estate Developers", "Corporate Clients", "Government Projects", "Institutional Facilities"];
 
 const Index = () => (
   <main>
     {/* Hero */}
-    <section className="min-h-[85vh] flex items-center pt-20">
-      <div className="container-site px-5 sm:px-8 lg:px-16 py-16 sm:py-24">
-        <div className="max-w-4xl mx-auto text-center">
+    <section className="min-h-[90vh] flex items-center pt-20 relative overflow-hidden">
+      <div
+        className="absolute inset-0 z-0 opacity-10"
+        style={{ backgroundImage: `url(${heroBg})`, backgroundSize: "cover", backgroundPosition: "center" }}
+      />
+      <div className="container-site px-5 sm:px-8 lg:px-16 py-16 sm:py-24 relative z-10">
+        <div className="max-w-4xl">
           <ScrollReveal>
+            <p className="label-sm mb-5 text-accent">Build Smart. Build Stress-Free.</p>
             <h1 className="heading-xl mb-6">
-              Electrical engineering{" "}
-              <span className="text-accent">&</span>{" "}
-              construction consulting
+              We Manage Your{" "}
+              <span className="text-accent">Construction</span>{" "}
+              From Start to Finish
             </h1>
           </ScrollReveal>
           <ScrollReveal delay={100}>
-            <p className="body-lg max-w-xl mx-auto mb-10">
-              We deliver specialized engineering solutions for commercial, industrial, and infrastructure projects.
+            <p className="body-lg max-w-xl mb-10">
+              BriQ is a full-service construction and engineering management firm. We take on your project and manage it completely — from planning to handover. No stress. No chasing workers.
             </p>
           </ScrollReveal>
           <ScrollReveal delay={200}>
-            <div className="flex flex-wrap justify-center gap-3">
+            <div className="flex flex-wrap gap-3">
               <Link to="/contact">
-                <Button size="lg">Contact us <ArrowRight className="w-4 h-4" /></Button>
+                <Button size="lg">Book a Consultation <ArrowRight className="w-4 h-4" /></Button>
               </Link>
-              <Link to="/projects">
-                <Button variant="outline" size="lg">View work <ArrowRight className="w-4 h-4" /></Button>
+              <Link to="/services">
+                <Button variant="outline" size="lg">Our Services <ArrowRight className="w-4 h-4" /></Button>
               </Link>
             </div>
           </ScrollReveal>
@@ -64,28 +76,18 @@ const Index = () => (
       </div>
     </section>
 
-    {/* Clients */}
+    {/* Target Clients */}
     <section className="border-t border-border py-12 sm:py-16">
       <div className="container-site px-5 sm:px-8 lg:px-16">
         <ScrollReveal>
+          <p className="label-sm text-center mb-6">Who we work with</p>
           <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-4">
             {clients.map((c) => (
-              <span key={c} className="text-sm font-medium text-muted-foreground/50 tracking-tight">{c}</span>
+              <span key={c} className="text-sm font-medium text-muted-foreground/60 tracking-tight">{c}</span>
             ))}
           </div>
         </ScrollReveal>
       </div>
-    </section>
-
-    {/* Featured Image */}
-    <section className="px-5 sm:px-8 lg:px-16 pb-20">
-      <ScrollReveal>
-        <div className="container-site">
-          <div className="rounded-2xl overflow-hidden aspect-[16/7]">
-            <img src={heroBg} alt="BriQ Engineering at work" className="w-full h-full object-cover" />
-          </div>
-        </div>
-      </ScrollReveal>
     </section>
 
     {/* Stats */}
@@ -97,7 +99,7 @@ const Index = () => (
         <ScrollReveal>
           <div className="max-w-xl mb-16">
             <p className="label-sm mb-3">Services</p>
-            <h2 className="heading-lg">Comprehensive engineering solutions</h2>
+            <h2 className="heading-lg">Everything your project needs, handled.</h2>
           </div>
         </ScrollReveal>
         <div className="space-y-0">
@@ -119,16 +121,16 @@ const Index = () => (
     </section>
 
     {/* Projects Grid */}
-    <section className="section-spacing bg-secondary">
+    <section className="section-spacing bg-brand-orange">
       <div className="container-site px-5 sm:px-8 lg:px-16">
         <ScrollReveal>
           <div className="flex items-end justify-between mb-14">
             <div>
               <p className="label-sm mb-3">Selected work</p>
-              <h2 className="heading-lg">Featured projects</h2>
+              <h2 className="heading-lg">Projects we've delivered</h2>
             </div>
             <Link to="/projects" className="hidden sm:flex items-center gap-1 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
-              All works <ArrowRight className="w-4 h-4" />
+              All projects <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
         </ScrollReveal>
@@ -142,39 +144,61 @@ const Index = () => (
                 <div className="flex items-start justify-between">
                   <div>
                     <h3 className="font-display font-semibold text-base tracking-tight">{p.title}</h3>
-                    <p className="text-sm text-muted-foreground mt-0.5">{p.category}</p>
+                    <p className="text-sm text-accent-foreground/80 mt-0.5">{p.category}</p>
                   </div>
-                  <ArrowRight className="w-4 h-4 mt-1 text-muted-foreground group-hover:text-foreground group-hover:translate-x-1 transition-all duration-300" />
+                  <ArrowRight className="w-4 h-4 mt-1 text-accent-foreground/80 group-hover:text-foreground group-hover:translate-x-1 transition-all duration-300" />
                 </div>
               </Link>
             </ScrollReveal>
           ))}
         </div>
         <div className="sm:hidden mt-8 text-center">
-          <Link to="/projects"><Button variant="outline">All works <ArrowRight className="w-4 h-4" /></Button></Link>
+          <Link to="/projects"><Button variant="outline">All projects <ArrowRight className="w-4 h-4" /></Button></Link>
         </div>
       </div>
     </section>
 
-    {/* Testimonials */}
+    {/* Recent Field Work (Original Images) */}
+    <section className="section-spacing border-t border-border">
+      <div className="container-site px-5 sm:px-8 lg:px-16">
+        <ScrollReveal>
+          <div className="max-w-xl mb-14">
+            <p className="label-sm mb-3">On-Site Reality</p>
+            <h2 className="heading-lg">Recent field work</h2>
+            <p className="body-sm mt-4">A glimpse into our active sites across Ghana. We don't just plan; we get our hands dirty.</p>
+          </div>
+        </ScrollReveal>
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+          {fieldWork.map((img, i) => (
+            <ScrollReveal key={i} delay={i * 80}>
+              <div className="aspect-square rounded-2xl overflow-hidden bg-secondary">
+                <img src={img} alt={`Field work ${i + 1}`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
+              </div>
+            </ScrollReveal>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* Why Choose BriQ */}
     <section className="section-spacing">
       <div className="container-site px-5 sm:px-8 lg:px-16">
         <ScrollReveal>
           <div className="max-w-xl mb-16">
-            <p className="label-sm mb-3">What our partners say</p>
-            <h2 className="heading-lg">Trusted by industry leaders</h2>
+            <p className="label-sm mb-3">Why BriQ</p>
+            <h2 className="heading-lg">You focus on the vision. We handle everything else.</h2>
           </div>
         </ScrollReveal>
-        <div className="space-y-0">
-          {testimonials.map((t, i) => (
-            <ScrollReveal key={t.name} delay={i * 80}>
-              <div className="py-10 border-t border-border last:border-b">
-                <blockquote className="text-lg sm:text-xl lg:text-2xl font-display font-medium leading-snug tracking-tight max-w-3xl mb-6">
-                  "{t.text}"
-                </blockquote>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-12">
+          {whyUs.map((item, i) => (
+            <ScrollReveal key={item.title} delay={i * 80}>
+              <div className="flex gap-5">
+                <div className="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center flex-shrink-0 mt-1">
+                  <item.icon className="w-4 h-4 text-accent" />
+                </div>
                 <div>
-                  <p className="text-sm font-semibold">{t.name}</p>
-                  <p className="text-sm text-muted-foreground">{t.role}</p>
+                  <h3 className="heading-md mb-2">{item.title}</h3>
+                  <p className="body-sm">{item.desc}</p>
                 </div>
               </div>
             </ScrollReveal>
@@ -183,24 +207,28 @@ const Index = () => (
       </div>
     </section>
 
-    {/* Lead Capture */}
+    {/* Booking CTA */}
     <section className="section-spacing bg-secondary">
       <div className="container-site px-5 sm:px-8 lg:px-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           <ScrollReveal>
-            <p className="label-sm mb-3">Start a project</p>
-            <h2 className="heading-lg mb-4">Start your project</h2>
+            <p className="label-sm mb-3">Start your project</p>
+            <h2 className="heading-lg mb-4">Ready to build?</h2>
             <p className="body-lg mb-8 max-w-md">
-              Contact our engineering team to discuss your project requirements.
+              Book a free consultation call with our team. We'll assess your project, give you a quote, and take full responsibility from there.
             </p>
-            <div className="flex items-center gap-4">
-              <a href="tel:+15551234567" className="flex items-center gap-2 text-sm font-medium hover:text-accent transition-colors">
-                <Phone className="w-4 h-4" /> +1 (555) 123-4567
+            <div className="space-y-3 text-sm">
+              <a href="tel:+233595122484" className="flex items-center gap-2 font-medium hover:text-accent transition-colors">
+                <Phone className="w-4 h-4" /> +233 595 122 484
               </a>
+              <a href="mailto:projects@briqengineering.com" className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors">
+                projects@briqengineering.com
+              </a>
+              <p className="text-muted-foreground">Oyarifa, Tema — Accra, Ghana</p>
             </div>
           </ScrollReveal>
           <ScrollReveal delay={100}>
-            <LeadForm />
+            <BookingForm />
           </ScrollReveal>
         </div>
       </div>

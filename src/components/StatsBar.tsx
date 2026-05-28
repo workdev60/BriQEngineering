@@ -1,10 +1,10 @@
 import ScrollReveal from "./ScrollReveal";
 
 const stats = [
-  { value: "15+", label: "Years in the industry" },
-  { value: "240+", label: "Projects completed" },
-  { value: "98%", label: "Client satisfaction" },
-  { value: "50+", label: "Team experts" },
+  { value: "5+", label: "Years of expertise" },
+  { value: "50+", label: "Projects delivered" },
+  { value: "100%", label: "Client ownership" },
+  { value: "4", label: "Core service areas" },
 ];
 
 const StatsBar = () => (
@@ -15,7 +15,9 @@ const StatsBar = () => (
           <ScrollReveal key={stat.label} delay={i * 80}>
             <div>
               <p className="label-sm mb-3">{stat.label}</p>
-              <p className="font-display text-[clamp(2.5rem,5vw,4.5rem)] font-bold leading-none tracking-[-0.04em] tabular-nums">{stat.value}</p>
+              <p className="font-display text-[clamp(2.5rem,5vw,4.5rem)] font-bold leading-none tracking-[-0.04em] tabular-nums text-accent">
+                {stat.value}
+              </p>
             </div>
             {i < stats.length - 1 && <div className="divider mt-8 hidden lg:block" />}
           </ScrollReveal>

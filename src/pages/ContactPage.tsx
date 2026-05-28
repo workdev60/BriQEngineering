@@ -1,7 +1,7 @@
-import { Phone, Mail, MapPin, MessageCircle } from "lucide-react";
+import { Phone, Mail, MapPin, MessageCircle, Instagram, Linkedin, Facebook } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ScrollReveal from "@/components/ScrollReveal";
-import LeadForm from "@/components/LeadForm";
+import BookingForm from "@/components/BookingForm";
 
 const ContactPage = () => (
   <main className="pt-20">
@@ -9,44 +9,60 @@ const ContactPage = () => (
       <div className="container-site px-5 sm:px-8 lg:px-16">
         <ScrollReveal>
           <div className="max-w-3xl mx-auto text-center mb-16">
-            <h1 className="heading-xl mb-5">Let's talk</h1>
-            <p className="body-lg max-w-xl mx-auto">Tell us about your project. Our team responds within 24 hours.</p>
+            <h1 className="heading-xl mb-5">Let's talk about your project</h1>
+            <p className="body-lg max-w-xl mx-auto">
+              Book a free consultation call and our team will reach out within 24 hours to discuss your project, provide a quote, and take things forward.
+            </p>
           </div>
         </ScrollReveal>
 
         <div className="grid grid-cols-1 lg:grid-cols-[1fr,380px] gap-16">
           <ScrollReveal>
-            <LeadForm title="Send us a message" />
+            <BookingForm title="Book a consultation call" />
           </ScrollReveal>
 
           <ScrollReveal delay={100}>
             <div className="space-y-8">
               <div>
-                <p className="label-sm mb-4">Contact</p>
+                <p className="label-sm mb-5">Contact details</p>
                 <div className="space-y-4">
-                  <a href="tel:+15551234567" className="flex items-center gap-3 group">
-                    <div className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center flex-shrink-0">
+                  <a href="tel:+233595122484" className="flex items-center gap-3 group">
+                    <div className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center flex-shrink-0 group-hover:bg-accent/10 transition-colors">
                       <Phone className="w-4 h-4" />
                     </div>
                     <div>
-                      <p className="text-sm font-medium group-hover:text-accent transition-colors">+1 (555) 123-4567</p>
-                      <p className="text-xs text-muted-foreground">Mon–Fri, 8AM–6PM</p>
+                      <p className="text-sm font-medium group-hover:text-accent transition-colors">+233 595 122 484</p>
+                      <p className="text-xs text-muted-foreground">Mon–Sat, 8AM–6PM GMT</p>
+                    </div>
+                  </a>
+                  <a href="mailto:projects@briqengineering.com" className="flex items-center gap-3 group">
+                    <div className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center flex-shrink-0 group-hover:bg-accent/10 transition-colors">
+                      <Mail className="w-4 h-4" />
+                    </div>
+                    <div>
+                      <p className="text-sm font-medium group-hover:text-accent transition-colors">projects@briqengineering.com</p>
                     </div>
                   </a>
                   <a href="mailto:info@briqengineering.com" className="flex items-center gap-3 group">
-                    <div className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center flex-shrink-0">
+                    <div className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center flex-shrink-0 group-hover:bg-accent/10 transition-colors">
                       <Mail className="w-4 h-4" />
                     </div>
                     <div>
                       <p className="text-sm font-medium group-hover:text-accent transition-colors">info@briqengineering.com</p>
                     </div>
                   </a>
-                  <a href="https://wa.me/15551234567" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 group">
-                    <div className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center flex-shrink-0">
-                      <MessageCircle className="w-4 h-4" />
+                  <a
+                    href="https://wa.me/233595122484"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 group"
+                  >
+                    <div className="w-10 h-10 rounded-full bg-[hsl(142,70%,40%)]/10 flex items-center justify-center flex-shrink-0">
+                      <MessageCircle className="w-4 h-4 text-[hsl(142,70%,40%)]" />
                     </div>
                     <div>
-                      <p className="text-sm font-medium group-hover:text-accent transition-colors">WhatsApp</p>
+                      <p className="text-sm font-medium group-hover:text-accent transition-colors">WhatsApp us</p>
+                      <p className="text-xs text-muted-foreground">Quick responses</p>
                     </div>
                   </a>
                 </div>
@@ -55,23 +71,50 @@ const ContactPage = () => (
               <div className="divider" />
 
               <div>
-                <p className="label-sm mb-4">Office</p>
+                <p className="label-sm mb-4">Location</p>
                 <div className="flex items-start gap-3">
                   <div className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center flex-shrink-0">
                     <MapPin className="w-4 h-4" />
                   </div>
-                  <p className="text-sm text-muted-foreground">123 Engineering Blvd, Suite 400<br />New York, NY 10001</p>
+                  <div>
+                    <p className="text-sm font-medium">Oyarifa, Tema — Accra</p>
+                    <p className="text-xs text-muted-foreground">Ghana, West Africa</p>
+                  </div>
                 </div>
               </div>
 
               <div className="divider" />
 
               <div>
-                <p className="label-sm mb-4">Social</p>
-                <div className="flex gap-4">
-                  {["LinkedIn", "X", "Instagram", "Facebook"].map((s) => (
-                    <a key={s} href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">{s}</a>
-                  ))}
+                <p className="label-sm mb-4">Follow us</p>
+                <div className="flex gap-3">
+                  <a
+                    href="https://www.instagram.com/briqengineering"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-9 h-9 rounded-full bg-secondary flex items-center justify-center hover:bg-accent hover:text-white transition-colors"
+                    aria-label="Instagram"
+                  >
+                    <Instagram className="w-4 h-4" />
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/company/briqengineering"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-9 h-9 rounded-full bg-secondary flex items-center justify-center hover:bg-accent hover:text-white transition-colors"
+                    aria-label="LinkedIn"
+                  >
+                    <Linkedin className="w-4 h-4" />
+                  </a>
+                  <a
+                    href="https://www.facebook.com/briqengineering"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-9 h-9 rounded-full bg-secondary flex items-center justify-center hover:bg-accent hover:text-white transition-colors"
+                    aria-label="Facebook"
+                  >
+                    <Facebook className="w-4 h-4" />
+                  </a>
                 </div>
               </div>
             </div>
@@ -80,12 +123,13 @@ const ContactPage = () => (
       </div>
     </section>
 
-    <section className="section-spacing-sm bg-secondary text-center">
+    <section className="section-spacing-sm bg-brand-orange text-center">
       <div className="container-site px-5 sm:px-8 lg:px-16">
         <ScrollReveal>
-          <h2 className="heading-lg mb-4">Prefer to call?</h2>
-          <a href="tel:+15551234567">
-            <Button size="lg"><Phone className="w-4 h-4" /> +1 (555) 123-4567</Button>
+          <h2 className="heading-lg mb-4">Prefer to call directly?</h2>
+          <p className="body-sm mb-6">Our team is available Mon–Sat, 8AM to 6PM.</p>
+          <a href="tel:+233595122484">
+            <Button size="lg"><Phone className="w-4 h-4" /> +233 595 122 484</Button>
           </a>
         </ScrollReveal>
       </div>

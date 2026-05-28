@@ -5,11 +5,11 @@ import { Button } from "@/components/ui/button";
 import briqLogo from "@/assets/briq-logo.jpeg";
 
 const NAV_LINKS = [
-  { label: "Work", path: "/projects" },
   { label: "Services", path: "/services" },
+  { label: "Projects", path: "/projects" },
   { label: "About", path: "/about" },
   { label: "Team", path: "/team" },
-  { label: "Sustainability", path: "/sustainability" },
+  { label: "Contact", path: "/contact" },
 ];
 
 const SiteHeader = () => {
@@ -17,11 +17,14 @@ const SiteHeader = () => {
   const location = useLocation();
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border/50">
       <div className="container-site flex items-center justify-between h-16 sm:h-20 px-5 sm:px-8 lg:px-16">
         <Link to="/" className="flex items-center gap-2.5">
-          <img src={briqLogo} alt="BriQ" className="h-8 w-8 rounded object-contain" />
-          <span className="font-display font-bold text-foreground text-[15px] tracking-tight hidden sm:block">BriQ Engineering</span>
+          <img src={briqLogo} alt="BriQ Engineering" className="h-9 w-9 rounded object-contain" />
+          <div className="hidden sm:block">
+            <span className="font-display font-bold text-foreground text-[15px] tracking-tight block leading-tight">BriQ Engineering</span>
+            <span className="text-[10px] text-muted-foreground tracking-widest uppercase">& Consultancy</span>
+          </div>
         </Link>
 
         <nav className="hidden lg:flex items-center gap-1">
@@ -41,14 +44,14 @@ const SiteHeader = () => {
         </nav>
 
         <div className="flex items-center gap-2">
-          <a href="tel:+15551234567" className="hidden sm:flex">
+          <a href="tel:+233595122484" className="hidden sm:flex">
             <Button variant="ghost" size="sm">
               <Phone className="w-3.5 h-3.5" />
             </Button>
           </a>
           <Link to="/contact">
             <Button size="sm">
-              Contact <ArrowRight className="w-3.5 h-3.5" />
+              Book a call <ArrowRight className="w-3.5 h-3.5" />
             </Button>
           </Link>
           <button
@@ -79,13 +82,13 @@ const SiteHeader = () => {
               </Link>
             ))}
             <div className="pt-4 flex flex-col gap-2">
-              <a href="tel:+15551234567">
+              <a href="tel:+233595122484">
                 <Button variant="outline" className="w-full">
-                  <Phone className="w-4 h-4" /> Call Us
+                  <Phone className="w-4 h-4" /> +233 595 122 484
                 </Button>
               </a>
               <Link to="/contact" onClick={() => setOpen(false)}>
-                <Button className="w-full">Contact <ArrowRight className="w-4 h-4" /></Button>
+                <Button className="w-full">Book a call <ArrowRight className="w-4 h-4" /></Button>
               </Link>
             </div>
           </nav>

@@ -3,22 +3,22 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import ScrollReveal from "@/components/ScrollReveal";
-import project1 from "@/assets/project-1.jpg";
-import project2 from "@/assets/project-2.jpg";
-import project3 from "@/assets/project-3.jpg";
-import project4 from "@/assets/project-4.jpg";
+import project1 from "@/assets/service-building.png";
+import project2 from "@/assets/service-plumbing.png";
+import project3 from "@/assets/service-power.png";
+import project4 from "@/assets/service-electrical.png";
 
-const categories = ["All", "Commercial", "Industrial", "Renewable Energy", "Infrastructure"];
+const categories = ["All", "Building Construction", "Electrical Works", "Power Infrastructure", "Plumbing"];
 
 const projects = [
-  { img: project1, title: "Metropolitan Office Complex", category: "Commercial", desc: "Full electrical design and installation for a 42-story mixed-use development.", outcome: "Completed 3 weeks ahead of schedule" },
-  { img: project2, title: "Industrial Power Distribution", category: "Industrial", desc: "High-voltage switchgear and distribution network for a 200,000 sq ft manufacturing facility.", outcome: "Zero safety incidents" },
-  { img: project3, title: "Corporate Solar Integration", category: "Renewable Energy", desc: "1.2MW rooftop solar system with smart grid integration for a tech campus.", outcome: "34% reduction in energy costs" },
-  { img: project4, title: "Highway Interchange Lighting", category: "Infrastructure", desc: "Complete LED lighting system design and installation for a major highway interchange.", outcome: "42% energy savings" },
-  { img: project1, title: "Medical Center Expansion", category: "Commercial", desc: "Critical power systems design for a 120-bed hospital expansion with full redundancy.", outcome: "100% uptime since commissioning" },
-  { img: project2, title: "Data Center Power Systems", category: "Industrial", desc: "Tier III data center electrical infrastructure with dual UPS and generator backup.", outcome: "99.999% power availability" },
-  { img: project3, title: "Municipal Solar Farm", category: "Renewable Energy", desc: "5MW ground-mounted solar installation with battery storage.", outcome: "Powers 1,200+ homes annually" },
-  { img: project4, title: "Transit Station Upgrade", category: "Infrastructure", desc: "Electrical modernization of 12 transit stations including signaling.", outcome: "Delivered 4 months early" },
+  { img: project1, title: "Residential Development", category: "Building Construction", desc: "Complete construction management for a residential development in Accra — from foundation to roofing and exterior finishing.", outcome: "Delivered on schedule" },
+  { img: project2, title: "Commercial Facility Build", category: "Building Construction", desc: "Full contractor management for a commercial facility including structural works, roofing, and interior finishing.", outcome: "Zero safety incidents" },
+  { img: project3, title: "Power Network Installation", category: "Power Infrastructure", desc: "High tension line installation and low voltage distribution network for an institutional client.", outcome: "Commissioned within budget" },
+  { img: project4, title: "Electrical Systems — Office Block", category: "Electrical Works", desc: "Full internal wiring, lighting systems, and distribution board installation for a multi-storey office block.", outcome: "Fully code-compliant handover" },
+  { img: project1, title: "Housing Estate Construction", category: "Building Construction", desc: "Multi-unit residential construction project — coordinating multiple artisan teams under BriQ supervision.", outcome: "Phased handover, on time" },
+  { img: project2, title: "Substation Construction", category: "Power Infrastructure", desc: "Substation design and construction for industrial power supply in the Greater Accra region.", outcome: "Operational within 90 days" },
+  { img: project3, title: "Building Electrical & Lighting", category: "Electrical Works", desc: "Complete lighting design and electrical installation for a new commercial build, including smart control systems.", outcome: "Exceeded client expectations" },
+  { img: project4, title: "Interior Plumbing Works", category: "Plumbing", desc: "Full plumbing installation for a multi-storey residential building — supply, drainage, and sanitation systems.", outcome: "No punch-list items at handover" },
 ];
 
 const ProjectsPage = () => {
@@ -32,8 +32,10 @@ const ProjectsPage = () => {
           <ScrollReveal>
             <div className="max-w-3xl mx-auto text-center mb-14">
               <p className="label-sm mb-3">Portfolio</p>
-              <h1 className="heading-xl mb-5">Our work</h1>
-              <p className="body-lg max-w-xl mx-auto">View our past engineering projects across various sectors.</p>
+              <h1 className="heading-xl mb-5">Projects we've delivered</h1>
+              <p className="body-lg max-w-xl mx-auto">
+                Every project on this page was managed end-to-end by BriQ — from the first site visit to the final handover.
+              </p>
             </div>
           </ScrollReveal>
 
@@ -60,7 +62,12 @@ const ProjectsPage = () => {
               <ScrollReveal key={p.title + i} delay={i * 60}>
                 <div className="group">
                   <div className="rounded-2xl overflow-hidden aspect-[4/3] bg-secondary mb-4">
-                    <img src={p.img} alt={p.title} className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-700 ease-out" loading="lazy" />
+                    <img
+                      src={p.img}
+                      alt={p.title}
+                      className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-700 ease-out"
+                      loading="lazy"
+                    />
                   </div>
                   <div className="flex items-start justify-between gap-4">
                     <div>
@@ -77,11 +84,12 @@ const ProjectsPage = () => {
         </div>
       </section>
 
-      <section className="section-spacing-sm bg-secondary text-center">
+      <section className="section-spacing-sm bg-brand-orange text-center">
         <div className="container-site px-5 sm:px-8 lg:px-16">
           <ScrollReveal>
-            <h2 className="heading-lg mb-6">Have a project in mind?</h2>
-            <Link to="/contact"><Button size="lg">Let's talk <ArrowRight className="w-4 h-4" /></Button></Link>
+            <h2 className="heading-lg mb-4">Have a project in mind?</h2>
+            <p className="body-sm mb-6">Book a free consultation and let's assess your project together.</p>
+            <Link to="/contact"><Button size="lg">Book a call <ArrowRight className="w-4 h-4" /></Button></Link>
           </ScrollReveal>
         </div>
       </section>
