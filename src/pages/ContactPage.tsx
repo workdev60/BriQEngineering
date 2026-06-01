@@ -26,12 +26,12 @@ const ContactPage = () => (
               <div>
                 <p className="label-sm mb-5">Contact details</p>
                 <div className="space-y-4">
-                  <a href="tel:+233595122484" className="flex items-center gap-3 group">
+                  <a href="tel:0595122484" className="flex items-center gap-3 group">
                     <div className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center flex-shrink-0 group-hover:bg-accent/10 transition-colors">
                       <Phone className="w-4 h-4" />
                     </div>
                     <div>
-                      <p className="text-sm font-medium group-hover:text-accent transition-colors">+233 595 122 484</p>
+                      <p className="text-sm font-medium group-hover:text-accent transition-colors">059 512 2484</p>
                       <p className="text-xs text-muted-foreground">Mon–Sat, 8AM–6PM GMT</p>
                     </div>
                   </a>
@@ -71,14 +71,34 @@ const ContactPage = () => (
               <div className="divider" />
 
               <div>
-                <p className="label-sm mb-4">Location</p>
-                <div className="flex items-start gap-3">
-                  <div className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center flex-shrink-0">
-                    <MapPin className="w-4 h-4" />
+                <p className="label-sm mb-4">Locations</p>
+                <div className="space-y-4">
+                  <div className="flex items-start gap-3">
+                    <div className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center flex-shrink-0">
+                      <MapPin className="w-4 h-4" />
+                    </div>
+                    <div>
+                      <p className="text-sm font-medium">Oyarifa — Accra, Ghana</p>
+                      <p className="text-xs text-muted-foreground">Digital Address: GE-068-1979</p>
+                    </div>
                   </div>
-                  <div>
-                    <p className="text-sm font-medium">Oyarifa, Tema — Accra</p>
-                    <p className="text-xs text-muted-foreground">Ghana, West Africa</p>
+                  <div className="flex items-start gap-3">
+                    <div className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center flex-shrink-0">
+                      <MapPin className="w-4 h-4" />
+                    </div>
+                    <div>
+                      <p className="text-sm font-medium">Tema — Accra, Ghana</p>
+                      <p className="text-xs text-muted-foreground">Digital Address: GT-000-0831</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center flex-shrink-0">
+                      <MapPin className="w-4 h-4" />
+                    </div>
+                    <div>
+                      <p className="text-sm font-medium">Bolgatanga — Sunyani, Ghana</p>
+                      <p className="text-xs text-muted-foreground">Regional Branch</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -128,8 +148,8 @@ const ContactPage = () => (
         <ScrollReveal>
           <h2 className="heading-lg mb-4">Prefer to call directly?</h2>
           <p className="body-sm mb-6">Our team is available Mon–Sat, 8AM to 6PM.</p>
-          <a href="tel:+233595122484">
-            <Button size="lg"><Phone className="w-4 h-4" /> +233 595 122 484</Button>
+          <a href="tel:0595122484">
+            <Button size="lg"><Phone className="w-4 h-4" /> 059 512 2484</Button>
           </a>
         </ScrollReveal>
       </div>

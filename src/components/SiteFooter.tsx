@@ -27,7 +27,7 @@ const SiteFooter = () => (
               <Instagram className="w-3.5 h-3.5" />
             </a>
             <a
-              href="https://www.linkedin.com/company/briqengineering"
+              href="https://www.linkedin.com/company/briq-engineering-consultancy-limited/"
               target="_blank"
               rel="noopener noreferrer"
               className="w-8 h-8 rounded-full bg-secondary flex items-center justify-center hover:bg-accent hover:text-white transition-colors"
@@ -101,9 +101,9 @@ const SiteFooter = () => (
           <h4 className="label-sm mb-5">Get in touch</h4>
           <ul className="space-y-4 text-sm text-muted-foreground">
             <li>
-              <a href="tel:+233595122484" className="flex items-start gap-2 hover:text-foreground transition-colors">
+              <a href="tel:0595122484" className="flex items-start gap-2 hover:text-foreground transition-colors">
                 <Phone className="w-3.5 h-3.5 mt-0.5 flex-shrink-0 text-accent" />
-                +233 595 122 484
+                059 512 2484
               </a>
             </li>
             <li>
@@ -119,10 +119,31 @@ const SiteFooter = () => (
               </a>
             </li>
             <li>
-              <span className="flex items-start gap-2">
+              <div className="flex items-start gap-2">
                 <MapPin className="w-3.5 h-3.5 mt-0.5 flex-shrink-0 text-accent" />
-                Oyarifa, Tema — Accra, Ghana
-              </span>
+                <div className="leading-tight">
+                  <span className="block">Oyarifa — Accra, Ghana</span>
+                  <span className="text-[11px] text-muted-foreground/70 block mt-0.5">GE-068-1979</span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div className="flex items-start gap-2">
+                <MapPin className="w-3.5 h-3.5 mt-0.5 flex-shrink-0 text-accent" />
+                <div className="leading-tight">
+                  <span className="block">Tema — Accra, Ghana</span>
+                  <span className="text-[11px] text-muted-foreground/70 block mt-0.5">GT-000-0831</span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div className="flex items-start gap-2">
+                <MapPin className="w-3.5 h-3.5 mt-0.5 flex-shrink-0 text-accent" />
+                <div className="leading-tight">
+                  <span className="block">Bolgatanga — Sunyani, Ghana</span>
+                  <span className="text-[11px] text-muted-foreground/70 block mt-0.5">Regional Branch</span>
+                </div>
+              </div>
             </li>
           </ul>
         </div>

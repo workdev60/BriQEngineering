@@ -12,7 +12,7 @@ const FloatingButtons = () => (
       <MessageCircle className="w-5 h-5" />
     </a>
     <a
-      href="tel:+233595122484"
+      href="tel:0595122484"
       className="w-12 h-12 rounded-full bg-foreground text-background shadow-lg hover:shadow-xl flex items-center justify-center transition-all duration-300 hover:scale-105 active:scale-95"
       aria-label="Call BriQ Engineering"
     >

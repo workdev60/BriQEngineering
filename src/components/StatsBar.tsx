@@ -1,8 +1,8 @@
 import ScrollReveal from "./ScrollReveal";
 
 const stats = [
-  { value: "5+", label: "Years of expertise" },
-  { value: "50+", label: "Projects delivered" },
+  { value: "3+", label: "Years of experience" },
+  { value: "15+", label: "Projects delivered" },
   { value: "100%", label: "Client ownership" },
   { value: "4", label: "Core service areas" },
 ];

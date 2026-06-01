@@ -3,6 +3,9 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ArrowRight, Linkedin, Instagram, Twitter } from "lucide-react";
 import brightImg from "@/assets/bright-quansah.jpeg";
+import davidImg from "@/assets/david-numo-studio.png";
+import davidAbegyahImg from "@/assets/david-abegyah-studio-cropped.png";
+import josephineImg from "@/assets/josephine-obeng.png";
 
 const team = [
   {
@@ -11,16 +14,37 @@ const team = [
     expertise: "Electrical engineering and construction management. Bright leads project oversight, client relationships, and ensures BriQ's delivery standards are upheld on every project.",
     img: brightImg,
     social: {
-      linkedin: "#",
-      instagram: "#",
+      linkedin: "https://www.linkedin.com/in/bright-quansah",
+      instagram: "https://www.instagram.com/_mr.bryt",
     },
   },
   {
     name: "David Numo",
     role: "Co-Founder & Operations",
     expertise: "Engineering and operations management. David manages artisan teams, site logistics, procurement, and ensures projects run on schedule and within budget.",
-    img: null,
+    img: davidImg,
     initials: "DN",
+    social: {
+      linkedin: "https://www.linkedin.com/in/david-ofori-numo",
+      instagram: "https://www.instagram.com/david_ofori_numo",
+    },
+  },
+  {
+    name: "David Abegyah Appiah-Abegyah",
+    role: "Quantity Surveyor & Intelligent Systems Engineer",
+    expertise: "Cost estimation, project economics, and intelligent systems integration. David ensures our projects are cost-effective while leveraging the latest technological solutions in construction.",
+    img: davidAbegyahImg,
+    initials: "DA",
+    social: {
+      linkedin: "#",
+    },
+  },
+  {
+    name: "Josephine Obeng",
+    role: "Safety Compliance Officer",
+    expertise: "Ensures that all BriQ engineering sites comply with the highest safety standards and regulations to protect both our team and the public.",
+    img: josephineImg,
+    initials: "JO",
     social: {
       linkedin: "#",
     },
@@ -41,16 +65,16 @@ const TeamPage = () => (
           </div>
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-16 max-w-3xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 lg:gap-x-10 gap-y-16 max-w-7xl mx-auto">
           {team.map((m, i) => (
             <ScrollReveal key={m.name} delay={i * 100}>
               <div className="group">
-                <div className="aspect-[3/4] rounded-2xl bg-secondary mb-6 overflow-hidden">
+                <div className="aspect-[4/5] rounded-2xl bg-secondary mb-6 overflow-hidden">
                   {m.img ? (
                     <img
                       src={m.img}
                       alt={m.name}
-                      className="w-full h-full object-cover object-top group-hover:scale-[1.02] transition-transform duration-700 ease-out"
+                      className="w-full h-full object-cover object-top group-hover:scale-[1.03] transition-transform duration-700 ease-out"
                       loading="lazy"
                     />
                   ) : (

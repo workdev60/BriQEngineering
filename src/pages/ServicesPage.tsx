@@ -75,7 +75,7 @@ const ServicesPage = () => (
                   </ul>
                   <div className="flex gap-2">
                     <Link to="/contact"><Button size="sm">Book a call <ArrowRight className="w-3.5 h-3.5" /></Button></Link>
-                    <a href="tel:+233595122484"><Button variant="outline" size="sm"><Phone className="w-3.5 h-3.5" /> Call us</Button></a>
+                    <a href="tel:0595122484"><Button variant="outline" size="sm"><Phone className="w-3.5 h-3.5" /> Call us</Button></a>
                   </div>
                 </div>
               </div>

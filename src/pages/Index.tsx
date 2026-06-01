@@ -22,10 +22,10 @@ const services = [
 ];
 
 const whyUs = [
-  { icon: Shield, title: "We Own Your Project", desc: "BriQ is the main contractor — not a referral platform. When you give us a project, we take full responsibility from day one to handover." },
-  { icon: Users, title: "Vetted Artisan Teams", desc: "Our artisans work under BriQ, not independently. Every worker is vetted, trained, and supervised by our engineers on-site." },
-  { icon: Award, title: "Quality Supervision", desc: "Licensed engineers oversee every phase. We don't cut corners and we don't compromise on standards." },
-  { icon: Clock, title: "On-Time Delivery", desc: "We manage timelines rigorously so you don't have to. Projects are completed on schedule and handed over cleanly." },
+  { icon: Award, title: "Multidisciplinary Expertise", desc: "Our team brings together construction management, electrical engineering, quantity surveying, and intelligent systems — giving every project the full range of specialist knowledge it needs." },
+  { icon: Shield, title: "Commitment to Innovation & Safety", desc: "We are ISO 45001:2018 aligned in our safety practices. Every site operates under a structured Safety, Health & Environment (SHE) policy with zero tolerance for preventable incidents." },
+  { icon: Users, title: "Tailored Solutions for Local & Global Markets", desc: "Whether you're a homeowner in Accra or an institutional client with international standards, BriQ designs and delivers solutions that fit your specific context and requirements." },
+  { icon: Clock, title: "Transparent, Ethical Business Practices", desc: "We operate with full honesty in every quote, contract, and conversation. No hidden costs. No inflated estimates. What we say is what you get." },
 ];
 
 const featuredProjects = [
@@ -218,8 +218,8 @@ const Index = () => (
               Book a free consultation call with our team. We'll assess your project, give you a quote, and take full responsibility from there.
             </p>
             <div className="space-y-3 text-sm">
-              <a href="tel:+233595122484" className="flex items-center gap-2 font-medium hover:text-accent transition-colors">
-                <Phone className="w-4 h-4" /> +233 595 122 484
+              <a href="tel:0595122484" className="flex items-center gap-2 font-medium hover:text-accent transition-colors">
+                <Phone className="w-4 h-4" /> 059 512 2484
               </a>
               <a href="mailto:projects@briqengineering.com" className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors">
                 projects@briqengineering.com

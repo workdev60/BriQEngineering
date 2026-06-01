@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 import ScrollReveal from "@/components/ScrollReveal";
 
 const pillars = [
-  { num: "01", title: "Renewable Energy Integration", desc: "We design and implement solar PV systems, wind energy integration, and hybrid power solutions that reduce dependence on fossil fuels while delivering reliable power." },
-  { num: "02", title: "Energy Efficiency", desc: "Our engineering approach prioritizes energy-efficient designs, smart building systems, LED retrofits, and power factor correction to minimize operational costs." },
-  { num: "03", title: "Sustainable Materials", desc: "We specify environmentally responsible materials, low-impact construction methods, and waste-reduction strategies for every project." },
-  { num: "04", title: "Green Building Standards", desc: "Our team holds expertise in LEED, BREEAM, and local green building certifications, helping clients achieve sustainability targets." },
+  { num: "01", title: "Renewable Energy Solutions", desc: "We design and install renewable energy systems for sustainable living — solar PV, hybrid power solutions, and energy-efficient lighting systems that reduce dependence on fossil fuels." },
+  { num: "02", title: "Safety, Health & Environment (SHE) Policy", desc: "Our operations are governed by a comprehensive SHE policy aligned with ISO 45001:2018. We believe all workplace injuries are preventable, and we manage every site with proactive risk assessment and continuous improvement." },
+  { num: "03", title: "Environmental Protection", desc: "We are committed to preventing pollution and environmental damage, managing waste responsibly, using resources efficiently, and complying with all environmental regulations including EPA standards — aligned with ISO 14001:2015." },
+  { num: "04", title: "Sustainable Materials & Methods", desc: "We specify environmentally responsible materials and low-impact construction methods on every project — minimising waste and operational costs without sacrificing quality or durability." },
 ];
 
 const SustainabilityPage = () => (

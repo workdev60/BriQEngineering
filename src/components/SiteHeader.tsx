@@ -44,7 +44,7 @@ const SiteHeader = () => {
         </nav>
 
         <div className="flex items-center gap-2">
-          <a href="tel:+233595122484" className="hidden sm:flex">
+          <a href="tel:0595122484" className="hidden sm:flex">
             <Button variant="ghost" size="sm">
               <Phone className="w-3.5 h-3.5" />
             </Button>
@@ -82,9 +82,9 @@ const SiteHeader = () => {
               </Link>
             ))}
             <div className="pt-4 flex flex-col gap-2">
-              <a href="tel:+233595122484">
+              <a href="tel:0595122484">
                 <Button variant="outline" className="w-full">
-                  <Phone className="w-4 h-4" /> +233 595 122 484
+                  <Phone className="w-4 h-4" /> 059 512 2484
                 </Button>
               </a>
               <Link to="/contact" onClick={() => setOpen(false)}>
