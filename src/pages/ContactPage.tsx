@@ -123,7 +123,7 @@ const ContactPage = () => (
                     <Instagram className="w-4 h-4" />
                   </a>
                   <a
-                    href="https://www.linkedin.com/company/briqengineering"
+                    href="https://www.linkedin.com/company/briq-engineering-consultancy-limited/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-9 h-9 rounded-full bg-secondary flex items-center justify-center hover:bg-accent hover:text-white transition-colors"

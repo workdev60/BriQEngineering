@@ -93,6 +93,16 @@ const SiteFooter = () => (
                 </Link>
               </li>
             ))}
+            <li>
+              <a href="/BriQ COMPANY.pdf" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                Company Profile
+              </a>
+            </li>
+            <li>
+              <a href="/BRIQ%20COMPANY%20-%20SAFETY%20POLICY%20%20(1).pdf" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                Safety Policy
+              </a>
+            </li>
           </ul>
         </div>
 

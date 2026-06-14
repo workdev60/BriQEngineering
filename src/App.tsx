@@ -14,6 +14,7 @@ import ContactPage from "./pages/ContactPage";
 import AboutPage from "./pages/AboutPage";
 import AdminPage from "./pages/AdminPage";
 import NotFound from "./pages/NotFound";
+import ScrollToTop from "@/components/ScrollToTop";
 import { usePageTracking } from "./hooks/usePageTracking";
 
 const queryClient = new QueryClient();
@@ -25,6 +26,7 @@ const AppInner = () => {
 
   return (
     <>
+      <ScrollToTop />
       {!isAdmin && <SiteHeader />}
       <Routes>
         <Route path="/" element={<Index />} />
