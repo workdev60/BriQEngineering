@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import ScrollReveal from "@/components/ScrollReveal";
+import safetyOutfit from "@/assets/safety-outfit.jpeg";
 
 const pillars = [
   { num: "01", title: "Renewable Energy Solutions", desc: "We design and install renewable energy systems for sustainable living — solar PV, hybrid power solutions, and energy-efficient lighting systems that reduce dependence on fossil fuels." },
@@ -39,6 +40,38 @@ const SustainabilityPage = () => (
             </div>
           </ScrollReveal>
         ))}
+      </div>
+    </section>
+
+    <section className="section-spacing border-t border-border">
+      <div className="container-site px-5 sm:px-8 lg:px-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <ScrollReveal>
+            <div className="rounded-2xl overflow-hidden bg-secondary aspect-[4/3]">
+              <img src={safetyOutfit} alt="BriQ Engineering Safety Compliance Outfit" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" loading="lazy" />
+            </div>
+          </ScrollReveal>
+          <ScrollReveal delay={100}>
+            <p className="label-sm mb-3 text-accent">Our Safety Culture</p>
+            <h2 className="heading-lg mb-5">Safety Compliance Outfit</h2>
+            <p className="body-lg mb-6 text-muted-foreground/90">
+              We take the safety of our engineers, artisans, and clients very seriously. Our official Safety Compliance Outfit is a physical testament to our commitment to a zero-incident work environment.
+            </p>
+            <ul className="space-y-3">
+              {[
+                "High-visibility reflective elements",
+                "Industrial-grade protective materials",
+                "ISO 45001:2018 aligned safety standards",
+                "Mandatory on all active BriQ sites"
+              ].map((item) => (
+                <li key={item} className="text-sm flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0" />
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </ScrollReveal>
+        </div>
       </div>
     </section>
 
