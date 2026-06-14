@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import briqLogo from "@/assets/briq-logo.jpeg";
-import { Instagram, Linkedin, Facebook, MessageCircle, Phone, Mail, MapPin } from "lucide-react";
+import { Instagram, Linkedin, Facebook, MessageCircle, Mail, MapPin } from "lucide-react";
 
 const SiteFooter = () => (
   <footer className="border-t border-border">
@@ -18,7 +18,7 @@ const SiteFooter = () => (
           {/* Social */}
           <div className="flex gap-3">
             <a
-              href="https://www.instagram.com/briqengineering"
+              href="https://www.instagram.com/briq_engineeringandco"
               target="_blank"
               rel="noopener noreferrer"
               className="w-8 h-8 rounded-full bg-secondary flex items-center justify-center hover:bg-accent hover:text-white transition-colors"
@@ -101,9 +101,9 @@ const SiteFooter = () => (
           <h4 className="label-sm mb-5">Get in touch</h4>
           <ul className="space-y-4 text-sm text-muted-foreground">
             <li>
-              <a href="tel:0595122484" className="flex items-start gap-2 hover:text-foreground transition-colors">
-                <Phone className="w-3.5 h-3.5 mt-0.5 flex-shrink-0 text-accent" />
-                059 512 2484
+              <a href="https://wa.me/233595122484" target="_blank" rel="noopener noreferrer" className="flex items-start gap-2 hover:text-foreground transition-colors">
+                <MessageCircle className="w-3.5 h-3.5 mt-0.5 flex-shrink-0 text-[hsl(142,70%,40%)]" />
+                WhatsApp us
               </a>
             </li>
             <li>

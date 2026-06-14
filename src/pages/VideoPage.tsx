@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Phone, Play, ArrowRight } from "lucide-react";
+import { MessageCircle, Play, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import ScrollReveal from "@/components/ScrollReveal";
 import aboutImg from "@/assets/about-team.jpg";
@@ -53,8 +53,8 @@ const VideoPage = () => (
         <ScrollReveal>
           <h2 className="heading-lg mb-6">Ready to start?</h2>
           <div className="flex flex-wrap justify-center gap-3">
-            <a href="tel:+15551234567">
-              <Button size="lg"><Phone className="w-4 h-4" /> Call now</Button>
+            <a href="https://wa.me/233595122484" target="_blank" rel="noopener noreferrer">
+              <Button size="lg"><MessageCircle className="w-4 h-4" /> WhatsApp us</Button>
             </a>
             <Link to="/contact">
               <Button variant="outline" size="lg">Contact us <ArrowRight className="w-4 h-4" /></Button>

@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin, MessageCircle, Instagram, Linkedin, Facebook } from "lucide-react";
+import { Mail, MapPin, MessageCircle, Instagram, Linkedin, Facebook } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ScrollReveal from "@/components/ScrollReveal";
 import BookingForm from "@/components/BookingForm";
@@ -26,13 +26,18 @@ const ContactPage = () => (
               <div>
                 <p className="label-sm mb-5">Contact details</p>
                 <div className="space-y-4">
-                  <a href="tel:0595122484" className="flex items-center gap-3 group">
-                    <div className="w-10 h-10 rounded-full bg-secondary flex items-center justify-center flex-shrink-0 group-hover:bg-accent/10 transition-colors">
-                      <Phone className="w-4 h-4" />
+                  <a
+                    href="https://wa.me/233595122484"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 group"
+                  >
+                    <div className="w-10 h-10 rounded-full bg-[hsl(142,70%,40%)]/10 flex items-center justify-center flex-shrink-0">
+                      <MessageCircle className="w-4 h-4 text-[hsl(142,70%,40%)]" />
                     </div>
                     <div>
-                      <p className="text-sm font-medium group-hover:text-accent transition-colors">059 512 2484</p>
-                      <p className="text-xs text-muted-foreground">Mon–Sat, 8AM–6PM GMT</p>
+                      <p className="text-sm font-medium group-hover:text-accent transition-colors">WhatsApp us</p>
+                      <p className="text-xs text-muted-foreground">Quick responses · Mon–Sat, 8AM–6PM GMT</p>
                     </div>
                   </a>
                   <a href="mailto:projects@briqengineering.com" className="flex items-center gap-3 group">
@@ -109,7 +114,7 @@ const ContactPage = () => (
                 <p className="label-sm mb-4">Follow us</p>
                 <div className="flex gap-3">
                   <a
-                    href="https://www.instagram.com/briqengineering"
+                    href="https://www.instagram.com/briq_engineeringandco"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-9 h-9 rounded-full bg-secondary flex items-center justify-center hover:bg-accent hover:text-white transition-colors"
@@ -146,10 +151,10 @@ const ContactPage = () => (
     <section className="section-spacing-sm bg-brand-orange text-center">
       <div className="container-site px-5 sm:px-8 lg:px-16">
         <ScrollReveal>
-          <h2 className="heading-lg mb-4">Prefer to call directly?</h2>
-          <p className="body-sm mb-6">Our team is available Mon–Sat, 8AM to 6PM.</p>
-          <a href="tel:0595122484">
-            <Button size="lg"><Phone className="w-4 h-4" /> 059 512 2484</Button>
+          <h2 className="heading-lg mb-4">Prefer to reach us instantly?</h2>
+          <p className="body-sm mb-6">Our team is available Mon–Sat, 8AM to 6PM. Message us on WhatsApp for quick responses.</p>
+          <a href="https://wa.me/233595122484" target="_blank" rel="noopener noreferrer">
+            <Button size="lg"><MessageCircle className="w-4 h-4" /> WhatsApp us now</Button>
           </a>
         </ScrollReveal>
       </div>
