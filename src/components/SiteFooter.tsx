@@ -85,6 +85,8 @@ const SiteFooter = () => (
               { label: "About", path: "/about" },
               { label: "Projects", path: "/projects" },
               { label: "Our Team", path: "/team" },
+              { label: "Sustainability", path: "/sustainability" },
+              { label: "Video Tour", path: "/video" },
               { label: "Contact", path: "/contact" },
             ].map((l) => (
               <li key={l.path}>

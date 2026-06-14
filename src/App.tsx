@@ -13,6 +13,8 @@ import TeamPage from "./pages/TeamPage";
 import ContactPage from "./pages/ContactPage";
 import AboutPage from "./pages/AboutPage";
 import AdminPage from "./pages/AdminPage";
+import SustainabilityPage from "./pages/SustainabilityPage";
+import VideoPage from "./pages/VideoPage";
 import NotFound from "./pages/NotFound";
 import ScrollToTop from "@/components/ScrollToTop";
 import { usePageTracking } from "./hooks/usePageTracking";
@@ -34,6 +36,8 @@ const AppInner = () => {
         <Route path="/services" element={<ServicesPage />} />
         <Route path="/projects" element={<ProjectsPage />} />
         <Route path="/team" element={<TeamPage />} />
+        <Route path="/sustainability" element={<SustainabilityPage />} />
+        <Route path="/video" element={<VideoPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/admin" element={<AdminPage />} />
         <Route path="*" element={<NotFound />} />
