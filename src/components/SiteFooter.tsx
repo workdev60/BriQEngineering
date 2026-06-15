@@ -1,3 +1,4 @@
+import WhatsAppIcon from "@/components/WhatsAppIcon";
 import { Link } from "react-router-dom";
 import briqLogo from "@/assets/briq-logo.jpeg";
 import { Instagram, Linkedin, Facebook, Mail, MapPin } from "lucide-react";
