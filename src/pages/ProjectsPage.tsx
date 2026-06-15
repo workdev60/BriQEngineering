@@ -12,17 +12,20 @@ import realProject2 from "@/assets/project-2.jpg";
 import realProject3 from "@/assets/project-3.jpg";
 import realProject4 from "@/assets/project-4.jpg";
 
-const categories = ["All", "Building Construction", "Electrical Works", "Power Infrastructure", "Plumbing"];
+const categories = ["All", "Residential and Commercial Development", "Interior Plumbing", "Electrical Installations Works", "Power Distribution Network"];
 
 const projects = [
-  { img: project1, title: "Residential Development", category: "Building Construction", desc: "Complete construction management for a residential development in Accra — from foundation to roofing and exterior finishing.", outcome: "Delivered on schedule" },
-  { img: project2, title: "Commercial Facility Build", category: "Building Construction", desc: "Full contractor management for a commercial facility including structural works, roofing, and interior finishing.", outcome: "Zero safety incidents" },
-  { img: project3, title: "Power Network Installation", category: "Power Infrastructure", desc: "High tension line installation and low voltage distribution network for an institutional client.", outcome: "Commissioned within budget" },
-  { img: project4, title: "Electrical Systems — Office Block", category: "Electrical Works", desc: "Full internal wiring, lighting systems, and distribution board installation for a multi-storey office block.", outcome: "Fully code-compliant handover" },
-  { img: realProject1, title: "Housing Estate Construction", category: "Building Construction", desc: "Multi-unit residential construction project — coordinating multiple artisan teams under BriQ supervision.", outcome: "Phased handover, on time" },
-  { img: realProject2, title: "Substation Construction", category: "Power Infrastructure", desc: "Substation design and construction for industrial power supply in the Greater Accra region.", outcome: "Operational within 90 days" },
-  { img: realProject3, title: "Building Electrical & Lighting", category: "Electrical Works", desc: "Complete lighting design and electrical installation for a new commercial build, including smart control systems.", outcome: "Exceeded client expectations" },
-  { img: realProject4, title: "Interior Plumbing Works", category: "Plumbing", desc: "Full plumbing installation for a multi-storey residential building — supply, drainage, and sanitation systems.", outcome: "No punch-list items at handover" },
+  { img: project1, title: "Residential Development", category: "Residential and Commercial Development", desc: "Complete construction management for a residential development in Accra — from foundation to roofing and exterior finishing.", outcome: "Delivered on schedule" },
+  { img: realProject1, title: "Commercial Facility Build", category: "Residential and Commercial Development", desc: "Full contractor management for a commercial facility including structural works, roofing, and interior finishing.", outcome: "Zero safety incidents" },
+  
+  { img: project2, title: "Commercial Plumbing Installation", category: "Interior Plumbing", desc: "Complete plumbing installation within buildings, both interior and exterior for commercial facilities.", outcome: "No punch-list items at handover" },
+  { img: realProject2, title: "Interior Plumbing Works", category: "Interior Plumbing", desc: "Full plumbing installation for a multi-storey residential building — supply, drainage, and sanitation systems.", outcome: "Leak-free certification" },
+  
+  { img: project4, title: "Electrical Systems — Office Block", category: "Electrical Installations Works", desc: "Full internal wiring, lighting systems, and distribution board installation for a multi-storey office block.", outcome: "Fully code-compliant handover" },
+  { img: realProject4, title: "Building Electrical & Lighting", category: "Electrical Installations Works", desc: "Complete lighting design and electrical installation for a new commercial build, including smart control systems.", outcome: "Exceeded client expectations" },
+
+  { img: project3, title: "Power Network Installation", category: "Power Distribution Network", desc: "High tension line installation and low voltage distribution network for an institutional client.", outcome: "Commissioned within budget" },
+  { img: realProject3, title: "Substation Construction", category: "Power Distribution Network", desc: "Substation design and construction for industrial power supply in the Greater Accra region.", outcome: "Operational within 90 days" },
 ];
 
 const ProjectsPage = () => {
