@@ -4,8 +4,8 @@ import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import ScrollReveal from "@/components/ScrollReveal";
 import realProject1 from "@/assets/project-5.jpg";
-import realProject2 from "@/assets/project-2.jpg";
-import realProject3 from "@/assets/project-3.jpg";
+import realProject2 from "@/assets/project-plumbing.jpg";
+import realProject3 from "@/assets/project-power.jpg";
 import realProject4 from "@/assets/project-4.jpg";
 
 const categories = ["All", "Residential and Commercial Development", "Interior Plumbing", "Electrical Installations Works", "Power Distribution Network"];
