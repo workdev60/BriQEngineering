@@ -61,12 +61,10 @@ const SiteFooter = () => (
           <h4 className="label-sm mb-5">Services</h4>
           <ul className="space-y-3">
             {[
-              "Building Construction",
-              "Plumbing Works",
-              "Electrical & Lighting",
-              "Power Infrastructure",
-              "Project Management",
-              "Engineering Consultancy",
+              "Residential and Commercial Development",
+              "Interior Plumbing",
+              "Electrical Installations Works",
+              "Power Distribution Network",
             ].map((s) => (
               <li key={s}>
                 <Link to="/services" className="text-sm text-muted-foreground hover:text-foreground transition-colors">

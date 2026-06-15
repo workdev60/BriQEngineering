@@ -6,34 +6,24 @@ import BookingForm from "@/components/BookingForm";
 
 const services = [
   {
-    title: "Building Construction",
+    title: "Residential and Commercial Development",
     desc: "From foundation to roofing, we handle the full construction process for residential and commercial buildings. BriQ takes full contractor responsibility — you don't need to source workers, supervise quality, or manage timelines.",
     items: ["Foundation & structural works", "Residential & commercial buildings", "Masonry & roofing", "Interior & exterior finishing"],
   },
   {
-    title: "Plumbing Works",
+    title: "Interior Plumbing",
     desc: "Complete plumbing installation within buildings, both interior and exterior. Our certified plumbing teams work under direct BriQ supervision to ensure compliance and quality at every stage.",
     items: ["Water supply & drainage systems", "Interior pipe installation", "Exterior plumbing works", "Sanitation & sewage systems"],
   },
   {
-    title: "Electrical & Lighting Systems",
+    title: "Electrical Installations Works",
     desc: "Full internal building wiring, circuit design, and lighting installations for homes and commercial facilities. We ensure every installation is safe, code-compliant, and professionally executed.",
     items: ["Internal wiring & circuit design", "Lighting installation & control", "Distribution boards & panels", "Safety & compliance checks"],
   },
   {
-    title: "Power Infrastructure",
+    title: "Power Distribution Network",
     desc: "Large-scale power infrastructure including high tension lines, low voltage distribution networks, substation construction, and complete power network installations for industrial and institutional clients.",
     items: ["High tension line installation", "Low voltage distribution networks", "Substation construction", "Power network commissioning"],
-  },
-  {
-    title: "Project Management",
-    desc: "End-to-end project execution with rigorous scheduling, cost control, and quality assurance. Our engineers supervise the entire execution — artisans work under BriQ, not independently.",
-    items: ["Site supervision & coordination", "Timeline & budget management", "Quality assurance & control", "Project handover & documentation"],
-  },
-  {
-    title: "Engineering Consultancy",
-    desc: "Technical advisory and feasibility studies for clients assessing new construction projects. We provide honest assessments, detailed cost estimates, and clear engineering recommendations.",
-    items: ["Feasibility & site assessment", "Cost estimation & budgeting", "Engineering design review", "Contractor vetting support"],
   },
 ];
 

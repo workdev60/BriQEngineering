@@ -3,10 +3,6 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import ScrollReveal from "@/components/ScrollReveal";
-import project1 from "@/assets/service-building.png";
-import project2 from "@/assets/service-plumbing.png";
-import project3 from "@/assets/service-power.png";
-import project4 from "@/assets/service-electrical.png";
 import realProject1 from "@/assets/project-1.jpg";
 import realProject2 from "@/assets/project-2.jpg";
 import realProject3 from "@/assets/project-3.jpg";
@@ -15,16 +11,16 @@ import realProject4 from "@/assets/project-4.jpg";
 const categories = ["All", "Residential and Commercial Development", "Interior Plumbing", "Electrical Installations Works", "Power Distribution Network"];
 
 const projects = [
-  { img: project1, title: "Residential Development", category: "Residential and Commercial Development", desc: "Complete construction management for a residential development in Accra — from foundation to roofing and exterior finishing.", outcome: "Delivered on schedule" },
+  { img: realProject1, title: "Residential Development", category: "Residential and Commercial Development", desc: "Complete construction management for a residential development in Accra — from foundation to roofing and exterior finishing.", outcome: "Delivered on schedule" },
   { img: realProject1, title: "Commercial Facility Build", category: "Residential and Commercial Development", desc: "Full contractor management for a commercial facility including structural works, roofing, and interior finishing.", outcome: "Zero safety incidents" },
   
-  { img: project2, title: "Commercial Plumbing Installation", category: "Interior Plumbing", desc: "Complete plumbing installation within buildings, both interior and exterior for commercial facilities.", outcome: "No punch-list items at handover" },
+  { img: realProject2, title: "Commercial Plumbing Installation", category: "Interior Plumbing", desc: "Complete plumbing installation within buildings, both interior and exterior for commercial facilities.", outcome: "No punch-list items at handover" },
   { img: realProject2, title: "Interior Plumbing Works", category: "Interior Plumbing", desc: "Full plumbing installation for a multi-storey residential building — supply, drainage, and sanitation systems.", outcome: "Leak-free certification" },
   
-  { img: project4, title: "Electrical Systems — Office Block", category: "Electrical Installations Works", desc: "Full internal wiring, lighting systems, and distribution board installation for a multi-storey office block.", outcome: "Fully code-compliant handover" },
+  { img: realProject4, title: "Electrical Systems — Office Block", category: "Electrical Installations Works", desc: "Full internal wiring, lighting systems, and distribution board installation for a multi-storey office block.", outcome: "Fully code-compliant handover" },
   { img: realProject4, title: "Building Electrical & Lighting", category: "Electrical Installations Works", desc: "Complete lighting design and electrical installation for a new commercial build, including smart control systems.", outcome: "Exceeded client expectations" },
 
-  { img: project3, title: "Power Network Installation", category: "Power Distribution Network", desc: "High tension line installation and low voltage distribution network for an institutional client.", outcome: "Commissioned within budget" },
+  { img: realProject3, title: "Power Network Installation", category: "Power Distribution Network", desc: "High tension line installation and low voltage distribution network for an institutional client.", outcome: "Commissioned within budget" },
   { img: realProject3, title: "Substation Construction", category: "Power Distribution Network", desc: "Substation design and construction for industrial power supply in the Greater Accra region.", outcome: "Operational within 90 days" },
 ];
 

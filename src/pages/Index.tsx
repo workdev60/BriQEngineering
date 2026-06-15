@@ -5,20 +5,20 @@ import ScrollReveal from "@/components/ScrollReveal";
 import StatsBar from "@/components/StatsBar";
 import BookingForm from "@/components/BookingForm";
 import heroBg from "@/assets/hero-bg-v2.png";
-import serviceBuilding from "@/assets/service-building.png";
-import servicePlumbing from "@/assets/service-plumbing.png";
-import serviceElectrical from "@/assets/service-electrical.png";
-import servicePower from "@/assets/service-power.png";
+import serviceBuilding from "@/assets/project-1.jpg";
+import servicePlumbing from "@/assets/project-2.jpg";
+import serviceElectrical from "@/assets/project-4.jpg";
+import servicePower from "@/assets/project-3.jpg";
 import oldProject1 from "@/assets/project-1.jpg";
 import oldProject2 from "@/assets/project-2.jpg";
 import oldProject3 from "@/assets/project-3.jpg";
 import oldProject4 from "@/assets/project-4.jpg";
 
 const services = [
-  { title: "Building Construction", desc: "Residential and commercial structures, fully managed from foundation to roofing. We bring in vetted artisans, supervise quality, and deliver results." },
-  { title: "Plumbing Works", desc: "Full plumbing installation within buildings — interior and exterior finishing works, handled by our certified plumbing teams." },
-  { title: "Electrical & Lighting Systems", desc: "Internal building wiring, lighting installations, and electrical system design for homes and commercial facilities." },
-  { title: "Power Infrastructure", desc: "High tension lines, low voltage distribution, substation construction, and power network installations for large-scale projects." },
+  { title: "Residential and Commercial Development", desc: "Residential and commercial structures, fully managed from foundation to roofing. We bring in vetted artisans, supervise quality, and deliver results." },
+  { title: "Interior Plumbing", desc: "Full plumbing installation within buildings — interior and exterior finishing works, handled by our certified plumbing teams." },
+  { title: "Electrical Installations Works", desc: "Internal building wiring, lighting installations, and electrical system design for homes and commercial facilities." },
+  { title: "Power Distribution Network", desc: "High tension lines, low voltage distribution, substation construction, and power network installations for large-scale projects." },
 ];
 
 const whyUs = [
@@ -29,10 +29,10 @@ const whyUs = [
 ];
 
 const featuredProjects = [
-  { img: serviceBuilding, title: "Residential Construction", category: "Building Construction" },
-  { img: servicePlumbing, title: "Commercial Facility", category: "Plumbing Works" },
-  { img: servicePower, title: "Power Infrastructure", category: "Power Infrastructure" },
-  { img: serviceElectrical, title: "Electrical Installation", category: "Electrical Works" },
+  { img: serviceBuilding, title: "Housing Development", category: "Residential and Commercial Development" },
+  { img: servicePlumbing, title: "Commercial Plumbing", category: "Interior Plumbing" },
+  { img: serviceElectrical, title: "Electrical Installation", category: "Electrical Installations Works" },
+  { img: servicePower, title: "Power Infrastructure", category: "Power Distribution Network" },
 ];
 
 const fieldWork = [oldProject1, oldProject2, oldProject3, oldProject4];

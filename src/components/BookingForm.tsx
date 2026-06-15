@@ -7,11 +7,10 @@ import { submitBookingCall } from "@/lib/supabase";
 import { useToast } from "@/hooks/use-toast";
 
 const SERVICE_TYPES = [
-  "Building Construction",
-  "Plumbing Works",
-  "Electrical & Lighting Systems",
-  "Power Infrastructure",
-  "Project Management",
+  "Residential and Commercial Development",
+  "Interior Plumbing",
+  "Electrical Installations Works",
+  "Power Distribution Network",
   "General Inquiry",
 ];
 
