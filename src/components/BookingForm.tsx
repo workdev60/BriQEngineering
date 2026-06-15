@@ -2,9 +2,8 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { CheckCircle, ArrowRight, Calendar } from "lucide-react";
-import { submitBookingCall } from "@/lib/supabase";
-import { useToast } from "@/hooks/use-toast";
+import { ArrowRight, Calendar } from "lucide-react";
+import WhatsAppIcon from "@/components/WhatsAppIcon";
 
 const SERVICE_TYPES = [
   "Residential and Commercial Development",
@@ -14,14 +13,14 @@ const SERVICE_TYPES = [
   "General Inquiry",
 ];
 
+const WHATSAPP_NUMBER = "233595122484";
+
 interface BookingFormProps {
   title?: string;
 }
 
 const BookingForm = ({ title = "Book a Consultation Call" }: BookingFormProps) => {
-  const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
-  const { toast } = useToast();
 
   const [form, setForm] = useState({
     full_name: "",
@@ -37,39 +36,39 @@ const BookingForm = ({ title = "Book a Consultation Call" }: BookingFormProps) =
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    try {
-      await submitBookingCall(form);
-      setSubmitted(true);
-    } catch {
-      toast({
-        title: "Something went wrong",
-        description: "Please try again or call us directly.",
-        variant: "destructive",
-      });
-    } finally {
-      setLoading(false);
-    }
-  };
 
-  if (submitted) {
-    return (
-      <div className="text-center py-12">
-        <CheckCircle className="w-12 h-12 text-accent mx-auto mb-4" />
-        <h3 className="heading-md mb-2">Call Booked!</h3>
-        <p className="body-sm max-w-sm mx-auto">
-          We've received your request. Our team will reach out within 24 hours to confirm your consultation.
-        </p>
-      </div>
-    );
-  }
+    // Build a structured WhatsApp message from the form details
+    const lines = [
+      `👋 *New Consultation Request — BriQ Engineering*`,
+      ``,
+      `*Name:* ${form.full_name}`,
+      `*Email:* ${form.email}`,
+      `*Phone:* ${form.phone}`,
+      form.company ? `*Company:* ${form.company}` : null,
+      `*Service:* ${form.service_type}`,
+      form.preferred_date ? `*Preferred Date:* ${form.preferred_date}` : null,
+      ``,
+      `*Project Details:*`,
+      form.message,
+    ]
+      .filter(Boolean)
+      .join("\n");
+
+    const encodedMessage = encodeURIComponent(lines);
+    const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`;
+
+    // Open WhatsApp in a new tab with the pre-filled message
+    window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+    setLoading(false);
+  };
 
   return (
     <div>
       <h3 className="heading-md mb-2">{title}</h3>
-      <p className="body-sm mb-6">Tell us about your project and we'll schedule a call at your convenience.</p>
+      <p className="body-sm mb-6">Fill in your details and we'll open WhatsApp with everything ready to send.</p>
       <form onSubmit={handleSubmit} className="space-y-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <Input
@@ -136,9 +135,9 @@ const BookingForm = ({ title = "Book a Consultation Call" }: BookingFormProps) =
           onChange={handleChange}
           className="rounded-xl bg-secondary border-0 text-sm placeholder:text-muted-foreground/60 resize-none"
         />
-        <Button type="submit" size="lg" disabled={loading}>
-          <Calendar className="w-4 h-4" />
-          {loading ? "Booking..." : "Book a Call"} <ArrowRight className="w-4 h-4" />
+        <Button type="submit" size="lg" disabled={loading} className="bg-[hsl(142,70%,40%)] hover:bg-[hsl(142,70%,34%)] text-white">
+          <WhatsAppIcon className="w-4 h-4" />
+          {loading ? "Opening WhatsApp..." : "Send via WhatsApp"} <ArrowRight className="w-4 h-4" />
         </Button>
       </form>
     </div>
