@@ -1,4 +1,4 @@
-import WhatsAppIcon from "@/components/WhatsAppIcon";
+
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, ArrowRight } from "lucide-react";
@@ -45,11 +45,7 @@ const SiteHeader = () => {
         </nav>
 
         <div className="flex items-center gap-2">
-          <a href="https://wa.me/233595122484" target="_blank" rel="noopener noreferrer" className="hidden sm:flex">
-            <Button variant="ghost" size="sm">
-              <WhatsAppIcon className="w-3.5 h-3.5" />
-            </Button>
-          </a>
+
           <Link to="/contact">
             <Button size="sm">
               Book a call <ArrowRight className="w-3.5 h-3.5" />
@@ -83,11 +79,7 @@ const SiteHeader = () => {
               </Link>
             ))}
             <div className="pt-4 flex flex-col gap-2">
-              <a href="https://wa.me/233595122484" target="_blank" rel="noopener noreferrer">
-                <Button variant="outline" className="w-full">
-                  <WhatsAppIcon className="w-4 h-4" /> WhatsApp us
-                </Button>
-              </a>
+
               <Link to="/contact" onClick={() => setOpen(false)}>
                 <Button className="w-full">Book a call <ArrowRight className="w-4 h-4" /></Button>
               </Link>
