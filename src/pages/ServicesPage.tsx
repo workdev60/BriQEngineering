@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, MessageCircle } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import ScrollReveal from "@/components/ScrollReveal";
 import BookingForm from "@/components/BookingForm";
@@ -65,7 +65,7 @@ const ServicesPage = () => (
                   </ul>
                   <div className="flex gap-2">
                     <Link to="/contact"><Button size="sm">Book a call <ArrowRight className="w-3.5 h-3.5" /></Button></Link>
-                    <a href="https://wa.me/233595122484" target="_blank" rel="noopener noreferrer"><Button variant="outline" size="sm"><MessageCircle className="w-3.5 h-3.5" /> WhatsApp us</Button></a>
+                    <a href="https://wa.me/233595122484" target="_blank" rel="noopener noreferrer"><Button variant="outline" size="sm"><WhatsAppIcon className="w-3.5 h-3.5" /> WhatsApp us</Button></a>
                   </div>
                 </div>
               </div>

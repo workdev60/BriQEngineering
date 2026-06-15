@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import briqLogo from "@/assets/briq-logo.jpeg";
-import { Instagram, Linkedin, Facebook, MessageCircle, Mail, MapPin } from "lucide-react";
+import { Instagram, Linkedin, Facebook, Mail, MapPin } from "lucide-react";
 
 const SiteFooter = () => (
   <footer className="border-t border-border">
@@ -51,7 +51,7 @@ const SiteFooter = () => (
               className="w-8 h-8 rounded-full bg-[hsl(142,70%,40%)]/10 flex items-center justify-center hover:bg-[hsl(142,70%,40%)] hover:text-white transition-colors"
               aria-label="WhatsApp"
             >
-              <MessageCircle className="w-3.5 h-3.5" />
+              <WhatsAppIcon className="w-3.5 h-3.5" />
             </a>
           </div>
         </div>
@@ -112,7 +112,7 @@ const SiteFooter = () => (
           <ul className="space-y-4 text-sm text-muted-foreground">
             <li>
               <a href="https://wa.me/233595122484" target="_blank" rel="noopener noreferrer" className="flex items-start gap-2 hover:text-foreground transition-colors">
-                <MessageCircle className="w-3.5 h-3.5 mt-0.5 flex-shrink-0 text-[hsl(142,70%,40%)]" />
+                <WhatsAppIcon className="w-3.5 h-3.5 mt-0.5 flex-shrink-0 text-[hsl(142,70%,40%)]" />
                 WhatsApp us
               </a>
             </li>

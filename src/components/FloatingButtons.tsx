@@ -1,4 +1,4 @@
-import { MessageCircle } from "lucide-react";
+import WhatsAppIcon from "@/components/WhatsAppIcon";
 
 const FloatingButtons = () => (
   <div className="fixed bottom-6 right-5 z-50 flex flex-col gap-3">
@@ -9,7 +9,7 @@ const FloatingButtons = () => (
       className="w-12 h-12 rounded-full bg-[hsl(142,70%,40%)] text-white shadow-lg hover:shadow-xl flex items-center justify-center transition-all duration-300 hover:scale-105 active:scale-95"
       aria-label="WhatsApp"
     >
-      <MessageCircle className="w-5 h-5" />
+      <WhatsAppIcon className="w-5 h-5" />
     </a>
   </div>
 );

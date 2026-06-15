@@ -1,4 +1,4 @@
-import { Mail, MapPin, MessageCircle, Instagram, Linkedin, Facebook } from "lucide-react";
+import { Mail, MapPin, Instagram, Linkedin, Facebook } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ScrollReveal from "@/components/ScrollReveal";
 import BookingForm from "@/components/BookingForm";
@@ -33,7 +33,7 @@ const ContactPage = () => (
                     className="flex items-center gap-3 group"
                   >
                     <div className="w-10 h-10 rounded-full bg-[hsl(142,70%,40%)]/10 flex items-center justify-center flex-shrink-0">
-                      <MessageCircle className="w-4 h-4 text-[hsl(142,70%,40%)]" />
+                      <WhatsAppIcon className="w-4 h-4 text-[hsl(142,70%,40%)]" />
                     </div>
                     <div>
                       <p className="text-sm font-medium group-hover:text-accent transition-colors">WhatsApp us</p>
@@ -63,7 +63,7 @@ const ContactPage = () => (
                     className="flex items-center gap-3 group"
                   >
                     <div className="w-10 h-10 rounded-full bg-[hsl(142,70%,40%)]/10 flex items-center justify-center flex-shrink-0">
-                      <MessageCircle className="w-4 h-4 text-[hsl(142,70%,40%)]" />
+                      <WhatsAppIcon className="w-4 h-4 text-[hsl(142,70%,40%)]" />
                     </div>
                     <div>
                       <p className="text-sm font-medium group-hover:text-accent transition-colors">WhatsApp us</p>
@@ -154,7 +154,7 @@ const ContactPage = () => (
           <h2 className="heading-lg mb-4">Prefer to reach us instantly?</h2>
           <p className="body-sm mb-6">Our team is available Mon–Sat, 8AM to 6PM. Message us on WhatsApp for quick responses.</p>
           <a href="https://wa.me/233595122484" target="_blank" rel="noopener noreferrer">
-            <Button size="lg"><MessageCircle className="w-4 h-4" /> WhatsApp us now</Button>
+            <Button size="lg"><WhatsAppIcon className="w-4 h-4" /> WhatsApp us now</Button>
           </a>
         </ScrollReveal>
       </div>

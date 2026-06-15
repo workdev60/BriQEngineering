@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, MessageCircle, Shield, Clock, Award, Users } from "lucide-react";
+import { ArrowRight, Shield, Clock, Award, Users } from "lucide-react";
 import ScrollReveal from "@/components/ScrollReveal";
 import StatsBar from "@/components/StatsBar";
 import BookingForm from "@/components/BookingForm";
@@ -219,7 +219,7 @@ const Index = () => (
             </p>
             <div className="space-y-3 text-sm">
               <a href="https://wa.me/233595122484" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 font-medium hover:text-accent transition-colors">
-                <MessageCircle className="w-4 h-4" /> WhatsApp us
+                <WhatsAppIcon className="w-4 h-4" /> WhatsApp us
               </a>
               <a href="mailto:projects@briqengineering.com" className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors">
                 projects@briqengineering.com

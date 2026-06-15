@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, ArrowRight, MessageCircle } from "lucide-react";
+import { Menu, X, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import briqLogo from "@/assets/briq-logo.jpeg";
 
@@ -46,7 +46,7 @@ const SiteHeader = () => {
         <div className="flex items-center gap-2">
           <a href="https://wa.me/233595122484" target="_blank" rel="noopener noreferrer" className="hidden sm:flex">
             <Button variant="ghost" size="sm">
-              <MessageCircle className="w-3.5 h-3.5" />
+              <WhatsAppIcon className="w-3.5 h-3.5" />
             </Button>
           </a>
           <Link to="/contact">
@@ -84,7 +84,7 @@ const SiteHeader = () => {
             <div className="pt-4 flex flex-col gap-2">
               <a href="https://wa.me/233595122484" target="_blank" rel="noopener noreferrer">
                 <Button variant="outline" className="w-full">
-                  <MessageCircle className="w-4 h-4" /> WhatsApp us
+                  <WhatsAppIcon className="w-4 h-4" /> WhatsApp us
                 </Button>
               </a>
               <Link to="/contact" onClick={() => setOpen(false)}>
