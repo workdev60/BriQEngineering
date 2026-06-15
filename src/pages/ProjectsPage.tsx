@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import ScrollReveal from "@/components/ScrollReveal";
-import realProject1 from "@/assets/project-1.jpg";
+import realProject1 from "@/assets/project-5.jpg";
 import realProject2 from "@/assets/project-2.jpg";
 import realProject3 from "@/assets/project-3.jpg";
 import realProject4 from "@/assets/project-4.jpg";
