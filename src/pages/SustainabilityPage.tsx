@@ -57,7 +57,7 @@ const SustainabilityPage = () => (
             <p className="body-lg mb-6 text-muted-foreground/90">
               We take the safety of our engineers, artisans, and clients very seriously. Our official Safety Compliance Outfit is a physical testament to our commitment to a zero-incident work environment.
             </p>
-            <ul className="space-y-3">
+            <ul className="space-y-3 mb-8">
               {[
                 "High-visibility reflective elements",
                 "Industrial-grade protective materials",
@@ -70,6 +70,9 @@ const SustainabilityPage = () => (
                 </li>
               ))}
             </ul>
+            <a href="/BRIQ%20COMPANY%20-%20SAFETY%20POLICY%20%20(1).pdf" target="_blank" rel="noopener noreferrer">
+              <Button variant="outline">View Full Safety Policy <ArrowRight className="w-4 h-4" /></Button>
+            </a>
           </ScrollReveal>
         </div>
       </div>
